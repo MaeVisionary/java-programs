@@ -15,6 +15,7 @@ public class Program_9_Start extends javax.swing.JFrame {
     
     public Program_9_Start() {
         initComponents();
+        this.setUndecorated(true);
     }
 
     /**
@@ -70,6 +71,21 @@ class jPanelTransparent extends JPanel {
         g2d.fillRect(0, 0, width, height); // Fill the entire panel area
     }
 }
+
+private void resetButtonColors() {
+    // Reset all buttons to their default color
+    Program_2BTN.setBackground(new java.awt.Color(250, 250, 245));
+    Program_3BTN.setBackground(new java.awt.Color(250, 250, 245));
+    Program_4BTN.setBackground(new java.awt.Color(250, 250, 245));
+    Program_5BTN.setBackground(new java.awt.Color(250, 250, 245));
+    Program_6BTN.setBackground(new java.awt.Color(250, 250, 245));
+    Program_7BTN.setBackground(new java.awt.Color(250, 250, 245));
+    Program_8BTN.setBackground(new java.awt.Color(250, 250, 245));
+    Program_9BTN.setBackground(new java.awt.Color(250, 250, 245));
+    Program_10BTN.setBackground(new java.awt.Color(250, 250, 245));
+    // Add more buttons if necessary
+}
+
    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -103,25 +119,26 @@ class jPanelTransparent extends JPanel {
         Program_10BTN = new javax.swing.JButton();
         DashboardBTN = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        Program_1BTN1 = new javax.swing.JButton();
+        Program_1BTN = new javax.swing.JButton();
         jPanel2 = new jPanelTransparent();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jPanel3 = new jPanelTransparent();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         jPanel4 = new jPanelTransparent();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         Program9BTN_Start = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -271,11 +288,20 @@ class jPanelTransparent extends JPanel {
         jLabel2.setText("GENERAL");
         MenuIcon.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
 
+        ExitBTN.setBackground(new java.awt.Color(250, 250, 245));
         ExitBTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         ExitBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/16.png"))); // NOI18N
         ExitBTN.setText("Exit                     ");
         ExitBTN.setToolTipText("");
         ExitBTN.setBorder(null);
+        ExitBTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ExitBTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ExitBTNMouseExited(evt);
+            }
+        });
         ExitBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ExitBTNActionPerformed(evt);
@@ -283,11 +309,21 @@ class jPanelTransparent extends JPanel {
         });
         MenuIcon.add(ExitBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 590, 150, 40));
 
+        Program_2BTN.setBackground(new java.awt.Color(250, 250, 245));
         Program_2BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Program_2BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/7.png"))); // NOI18N
         Program_2BTN.setText("Barkada Outing     ");
         Program_2BTN.setToolTipText("");
         Program_2BTN.setBorder(null);
+        Program_2BTN.setBorderPainted(false);
+        Program_2BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program_2BTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program_2BTNMouseExited(evt);
+            }
+        });
         Program_2BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Program_2BTNActionPerformed(evt);
@@ -295,11 +331,20 @@ class jPanelTransparent extends JPanel {
         });
         MenuIcon.add(Program_2BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 150, -1));
 
+        Program_3BTN.setBackground(new java.awt.Color(250, 250, 245));
         Program_3BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Program_3BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/8.png"))); // NOI18N
         Program_3BTN.setText(" Vaccine Tracker     ");
         Program_3BTN.setToolTipText("");
         Program_3BTN.setBorder(null);
+        Program_3BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program_3BTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program_3BTNMouseExited(evt);
+            }
+        });
         Program_3BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Program_3BTNActionPerformed(evt);
@@ -307,11 +352,20 @@ class jPanelTransparent extends JPanel {
         });
         MenuIcon.add(Program_3BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 150, -1));
 
+        Program_4BTN.setBackground(new java.awt.Color(250, 250, 245));
         Program_4BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Program_4BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/9.png"))); // NOI18N
         Program_4BTN.setText("Kuryente Bill Mo!   ");
         Program_4BTN.setToolTipText("");
         Program_4BTN.setBorder(null);
+        Program_4BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program_4BTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program_4BTNMouseExited(evt);
+            }
+        });
         Program_4BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Program_4BTNActionPerformed(evt);
@@ -319,11 +373,20 @@ class jPanelTransparent extends JPanel {
         });
         MenuIcon.add(Program_4BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 150, -1));
 
+        Program_5BTN.setBackground(new java.awt.Color(250, 250, 245));
         Program_5BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Program_5BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/10.png"))); // NOI18N
         Program_5BTN.setText(" Jeepney Driver     ");
         Program_5BTN.setToolTipText("");
         Program_5BTN.setBorder(null);
+        Program_5BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program_5BTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program_5BTNMouseExited(evt);
+            }
+        });
         Program_5BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Program_5BTNActionPerformed(evt);
@@ -331,11 +394,20 @@ class jPanelTransparent extends JPanel {
         });
         MenuIcon.add(Program_5BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 150, -1));
 
+        Program_6BTN.setBackground(new java.awt.Color(250, 250, 245));
         Program_6BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Program_6BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/11.png"))); // NOI18N
         Program_6BTN.setText("Sinehan Earnings  ");
         Program_6BTN.setToolTipText("");
         Program_6BTN.setBorder(null);
+        Program_6BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program_6BTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program_6BTNMouseExited(evt);
+            }
+        });
         Program_6BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Program_6BTNActionPerformed(evt);
@@ -343,11 +415,20 @@ class jPanelTransparent extends JPanel {
         });
         MenuIcon.add(Program_6BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 150, -1));
 
+        Program_7BTN.setBackground(new java.awt.Color(250, 250, 245));
         Program_7BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Program_7BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/12.png"))); // NOI18N
         Program_7BTN.setText("Palengke Budget  ");
         Program_7BTN.setToolTipText("");
         Program_7BTN.setBorder(null);
+        Program_7BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program_7BTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program_7BTNMouseExited(evt);
+            }
+        });
         Program_7BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Program_7BTNActionPerformed(evt);
@@ -355,11 +436,20 @@ class jPanelTransparent extends JPanel {
         });
         MenuIcon.add(Program_7BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 150, -1));
 
+        Program_8BTN.setBackground(new java.awt.Color(250, 250, 245));
         Program_8BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Program_8BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/13.png"))); // NOI18N
         Program_8BTN.setText(" Laundry Pricing      ");
         Program_8BTN.setToolTipText("");
         Program_8BTN.setBorder(null);
+        Program_8BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program_8BTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program_8BTNMouseExited(evt);
+            }
+        });
         Program_8BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Program_8BTNActionPerformed(evt);
@@ -367,6 +457,7 @@ class jPanelTransparent extends JPanel {
         });
         MenuIcon.add(Program_8BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 150, -1));
 
+        Program_9BTN.setBackground(new java.awt.Color(250, 250, 245));
         Program_9BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Program_9BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/14.png"))); // NOI18N
         Program_9BTN.setText("Typhoon Alert Level");
@@ -392,11 +483,20 @@ class jPanelTransparent extends JPanel {
         jLabel3.setText("PROGRAMS");
         MenuIcon.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
+        Program_10BTN.setBackground(new java.awt.Color(250, 250, 245));
         Program_10BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Program_10BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/15.png"))); // NOI18N
         Program_10BTN.setText("Shipping Fee         ");
         Program_10BTN.setToolTipText("");
         Program_10BTN.setBorder(null);
+        Program_10BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program_10BTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program_10BTNMouseExited(evt);
+            }
+        });
         Program_10BTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Program_10BTNActionPerformed(evt);
@@ -404,11 +504,20 @@ class jPanelTransparent extends JPanel {
         });
         MenuIcon.add(Program_10BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 150, 40));
 
+        DashboardBTN.setBackground(new java.awt.Color(250, 250, 245));
         DashboardBTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         DashboardBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/17.png"))); // NOI18N
         DashboardBTN.setText("Dashboard            ");
         DashboardBTN.setToolTipText("");
         DashboardBTN.setBorder(null);
+        DashboardBTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                DashboardBTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                DashboardBTNMouseExited(evt);
+            }
+        });
         DashboardBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DashboardBTNActionPerformed(evt);
@@ -422,78 +531,100 @@ class jPanelTransparent extends JPanel {
         jLabel6.setText("BayanApp");
         MenuIcon.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 120, -1));
 
-        Program_1BTN1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        Program_1BTN1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/6.png"))); // NOI18N
-        Program_1BTN1.setText("Mutya ng Barangay");
-        Program_1BTN1.setToolTipText("");
-        Program_1BTN1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        Program_1BTN1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Program_1BTN1ActionPerformed(evt);
+        Program_1BTN.setBackground(new java.awt.Color(250, 250, 245));
+        Program_1BTN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Program_1BTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/6.png"))); // NOI18N
+        Program_1BTN.setText("Mutya ng Barangay");
+        Program_1BTN.setToolTipText("");
+        Program_1BTN.setBorder(null);
+        Program_1BTN.setBorderPainted(false);
+        Program_1BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program_1BTNMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program_1BTNMouseExited(evt);
             }
         });
-        MenuIcon.add(Program_1BTN1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 150, -1));
+        Program_1BTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Program_1BTNActionPerformed(evt);
+            }
+        });
+        MenuIcon.add(Program_1BTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 150, -1));
 
         jPanel2.setPreferredSize(new java.awt.Dimension(300, 400));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Enter Wind Speed (kph):");
+        jLabel4.setText("Input Wind Speed and Rainfall");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Typhoon.png"))); // NOI18N
 
-        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel20.setText("Enter Rainfall Amount (mm):");
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel10.setText(" Type in current wind speed (in kph). ");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel11.setText(" Type in rainfall (in mm). ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel4))
+                .addGap(41, 41, 41))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel4)))
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel7))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(jLabel7)))
-                .addContainerGap(184, Short.MAX_VALUE))
+                        .addGap(74, 74, 74)
+                        .addComponent(jLabel11)))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(47, 47, 47)
                 .addComponent(jLabel7)
-                .addGap(56, 56, 56)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel4)
-                .addGap(27, 27, 27)
-                .addComponent(jLabel20)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel10)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel11)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Stay Safe, Stay Alert!");
+        jLabel5.setText("Typhoon Alert Level Analyzer");
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setText("NOT COMPLETED");
+        jLabel8.setText("Be prepared, be safe. This program provides real-time alerts based on wind speed and rainfall,");
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setText("allowing communities to take timely action when a typhoon is on the way. Safety comes first!");
 
         jPanel3.setPreferredSize(new java.awt.Dimension(300, 400));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel12.setText("Determine the Alert Level");
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Typhoon-2.png"))); // NOI18N
+
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel14.setText(" The system uses PAGASA criteria");
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel15.setText(" to assign a typhoon signal number.");
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Typhoon-2.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -502,22 +633,23 @@ class jPanelTransparent extends JPanel {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(0, 56, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel12)
-                        .addComponent(jLabel14)))
-                .addGap(49, 49, 49))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(jLabel13)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel12)
+                                .addComponent(jLabel14)))
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(86, 86, 86))))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(46, 46, 46)
                 .addComponent(jLabel13)
-                .addGap(36, 36, 36)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel12)
                 .addGap(33, 33, 33)
                 .addComponent(jLabel14)
@@ -545,16 +677,14 @@ class jPanelTransparent extends JPanel {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel16))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(jLabel17)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel16)
+                .addGap(62, 62, 62))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel17))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(jLabel19))
@@ -574,22 +704,28 @@ class jPanelTransparent extends JPanel {
                 .addComponent(jLabel18)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel19)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        Program9BTN_Start.setBackground(new java.awt.Color(250, 250, 245));
         Program9BTN_Start.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Program9BTN_Start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/18.png"))); // NOI18N
         Program9BTN_Start.setText("   LET'S GET IT ON!");
         Program9BTN_Start.setToolTipText("");
         Program9BTN_Start.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         Program9BTN_Start.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Program9BTN_StartMouseClicked(evt);
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Program9BTN_StartMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Program9BTN_StartMouseExited(evt);
             }
         });
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("Typhoon Alert Level Analyzer");
+        Program9BTN_Start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Program9BTN_StartActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout MainBoardLayout = new javax.swing.GroupLayout(MainBoard);
         MainBoard.setLayout(MainBoardLayout);
@@ -599,30 +735,24 @@ class jPanelTransparent extends JPanel {
                 .addComponent(MenuIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(51, 51, 51)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14))
-                    .addGroup(MainBoardLayout.createSequentialGroup()
+                        .addGap(230, 230, 230)
                         .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(MainBoardLayout.createSequentialGroup()
-                                .addGap(251, 251, 251)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(MainBoardLayout.createSequentialGroup()
-                                .addGap(478, 478, 478)
-                                .addComponent(Program9BTN_Start, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(MainBoardLayout.createSequentialGroup()
-                                .addGap(209, 209, 209)
-                                .addComponent(jLabel8)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainBoardLayout.createSequentialGroup()
-                    .addContainerGap(679, Short.MAX_VALUE)
-                    .addComponent(jLabel9)
-                    .addGap(491, 491, 491)))
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel8)))
+                    .addGroup(MainBoardLayout.createSequentialGroup()
+                        .addGap(251, 251, 251)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MainBoardLayout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(85, 85, 85)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MainBoardLayout.createSequentialGroup()
+                        .addGap(478, 478, 478)
+                        .addComponent(Program9BTN_Start, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         MainBoardLayout.setVerticalGroup(
             MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -630,9 +760,11 @@ class jPanelTransparent extends JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainBoardLayout.createSequentialGroup()
                 .addGap(65, 65, 65)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
@@ -640,11 +772,6 @@ class jPanelTransparent extends JPanel {
                 .addGap(39, 39, 39)
                 .addComponent(Program9BTN_Start)
                 .addGap(49, 49, 49))
-            .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(MainBoardLayout.createSequentialGroup()
-                    .addGap(155, 155, 155)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(568, Short.MAX_VALUE)))
         );
 
         getContentPane().add(MainBoard, java.awt.BorderLayout.CENTER);
@@ -778,23 +905,155 @@ class jPanelTransparent extends JPanel {
         this.setVisible(false);
     }//GEN-LAST:event_DashboardBTNActionPerformed
 
-    private void Program_1BTN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_1BTN1ActionPerformed
+    private void Program9BTN_StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program9BTN_StartActionPerformed
+        
+        resetButtonColors();
+        Program_9BTN.setBackground(new java.awt.Color(180, 100, 255));
         Program_9_Start start9 = new Program_9_Start();
         start9.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_Program_1BTN1ActionPerformed
+    }//GEN-LAST:event_Program9BTN_StartActionPerformed
+
+    private void Program_1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_1BTNActionPerformed
+        //Program_1 program1 = new Program_1();
+        //program1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_1BTNActionPerformed
 
     private void Program_9BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseEntered
-        Program_9BTN.setBackground(new Color(118, 16, 198));
+        Program_9BTN.setBackground(new Color(150, 50, 230));
+        Program_9BTN.setForeground(Color.WHITE);
     }//GEN-LAST:event_Program_9BTNMouseEntered
 
     private void Program_9BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseExited
         Program_9BTN.setBackground(Color.WHITE);
+        Program_9BTN.setForeground(Color.BLACK);
     }//GEN-LAST:event_Program_9BTNMouseExited
 
-    private void Program9BTN_StartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program9BTN_StartMouseClicked
-        
-    }//GEN-LAST:event_Program9BTN_StartMouseClicked
+    private void Program_10BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseEntered
+        Program_10BTN.setBackground(new Color(150, 50, 230));
+        Program_10BTN.setForeground(Color.WHITE);
+    }//GEN-LAST:event_Program_10BTNMouseEntered
+
+    private void Program_10BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseExited
+        Program_10BTN.setBackground(Color.WHITE);
+        Program_10BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_10BTNMouseExited
+
+    private void Program_1BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseExited
+        Program_1BTN.setBackground(Color.WHITE);
+        Program_1BTN.setForeground(Color.BLACK);
+
+    }//GEN-LAST:event_Program_1BTNMouseExited
+
+    private void Program_1BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseEntered
+        Program_1BTN.setBackground(new Color(150, 50, 230));
+        Program_1BTN.setForeground(Color.WHITE); 
+        Program_1BTN.setBorderPainted(false);
+        Program_1BTN.setBorder(null);
+        Program_1BTN.setBorder(BorderFactory.createEmptyBorder());
+
+    }//GEN-LAST:event_Program_1BTNMouseEntered
+
+    private void DashboardBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseEntered
+        DashboardBTN.setForeground(Color.WHITE);
+        DashboardBTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_DashboardBTNMouseEntered
+
+    private void DashboardBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseExited
+        DashboardBTN.setForeground(Color.BLACK);
+        DashboardBTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_DashboardBTNMouseExited
+
+    private void ExitBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseEntered
+        ExitBTN.setForeground(Color.WHITE);
+        ExitBTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_ExitBTNMouseEntered
+
+    private void ExitBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseExited
+        ExitBTN.setForeground(Color.BLACK);
+        ExitBTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_ExitBTNMouseExited
+
+    private void Program_2BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseEntered
+        Program_2BTN.setForeground(Color.WHITE);
+        Program_2BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_2BTNMouseEntered
+
+    private void Program_2BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseExited
+        Program_2BTN.setForeground(Color.BLACK);
+        Program_2BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_2BTNMouseExited
+
+    private void Program_3BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseEntered
+        Program_3BTN.setForeground(Color.WHITE);
+        Program_3BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_3BTNMouseEntered
+
+    private void Program_3BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseExited
+        Program_3BTN.setForeground(Color.BLACK);
+        Program_3BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_3BTNMouseExited
+
+    private void Program_4BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseEntered
+        Program_4BTN.setForeground(Color.WHITE);
+        Program_4BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_4BTNMouseEntered
+
+    private void Program_4BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseExited
+        Program_4BTN.setForeground(Color.BLACK);
+        Program_4BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_4BTNMouseExited
+
+    private void Program_5BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseEntered
+        Program_5BTN.setForeground(Color.WHITE);
+        Program_5BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_5BTNMouseEntered
+
+    private void Program_5BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseExited
+        Program_5BTN.setForeground(Color.BLACK);
+        Program_5BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_5BTNMouseExited
+
+    private void Program_6BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseEntered
+        Program_6BTN.setForeground(Color.WHITE);
+        Program_6BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_6BTNMouseEntered
+
+    private void Program_6BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseExited
+        Program_6BTN.setForeground(Color.BLACK);
+        Program_6BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_6BTNMouseExited
+
+    private void Program_7BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseEntered
+        Program_7BTN.setForeground(Color.WHITE);
+        Program_7BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_7BTNMouseEntered
+
+    private void Program_7BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseExited
+        Program_7BTN.setForeground(Color.BLACK);
+        Program_7BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_7BTNMouseExited
+
+    private void Program_8BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseEntered
+        Program_8BTN.setForeground(Color.WHITE);
+        Program_8BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_8BTNMouseEntered
+
+    private void Program_8BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseExited
+        Program_8BTN.setForeground(Color.BLACK);
+        Program_8BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_8BTNMouseExited
+
+    private void Program9BTN_StartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program9BTN_StartMouseEntered
+        Program9BTN_Start.setForeground(Color.WHITE);
+        Program9BTN_Start.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program9BTN_StartMouseEntered
+
+    private void Program9BTN_StartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program9BTN_StartMouseExited
+        Program9BTN_Start.setForeground(Color.BLACK);
+        Program9BTN_Start.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program9BTN_StartMouseExited
 
     /**
      * @param args the command line arguments
@@ -846,7 +1105,7 @@ class jPanelTransparent extends JPanel {
     private javax.swing.JPanel MenuIcon;
     private javax.swing.JButton Program9BTN_Start;
     private javax.swing.JButton Program_10BTN;
-    private javax.swing.JButton Program_1BTN1;
+    private javax.swing.JButton Program_1BTN;
     private javax.swing.JButton Program_2BTN;
     private javax.swing.JButton Program_3BTN;
     private javax.swing.JButton Program_4BTN;
@@ -857,6 +1116,8 @@ class jPanelTransparent extends JPanel {
     private javax.swing.JButton Program_9BTN;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -866,7 +1127,6 @@ class jPanelTransparent extends JPanel {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
