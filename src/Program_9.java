@@ -876,15 +876,14 @@ private void resetButtonColors() {
     }//GEN-LAST:event_Program_6BTNActionPerformed
 
     private void Program_7BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_7BTNActionPerformed
-        //Program_7 program7 = new Program_7();
-        //program7.setVisible(true);
-        this.setVisible(false);
+        Program_7 frame71 = new Program_7(); // create instance of the Program 7 screen
+        frame71.setVisible(true);  // show it
+      
     }//GEN-LAST:event_Program_7BTNActionPerformed
 
     private void Program_8BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_8BTNActionPerformed
-        //Program_8 program8 = new Program_8();
-        //program8.setVisible(true);
-        this.setVisible(false);
+        Program_8 frame8 = new Program_8();
+        frame8.setVisible(true);
     }//GEN-LAST:event_Program_8BTNActionPerformed
 
     private void Program_9BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_9BTNActionPerformed
