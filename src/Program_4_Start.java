@@ -7,13 +7,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Program_9 extends javax.swing.JFrame {
+public class Program_4_Start extends javax.swing.JFrame {
 
     /**
-     * Creates new form Program_9
+     * Creates new form Program_4
      */
     
-    public Program_9() {
+    public Program_4_Start() {
         initComponents();
         this.setUndecorated(true);
     }
@@ -74,6 +74,7 @@ class jPanelTransparent extends JPanel {
 
 private void resetButtonColors() {
     // Reset all buttons to their default color
+    Program_1BTN.setBackground(new java.awt.Color(250, 250, 245));
     Program_2BTN.setBackground(new java.awt.Color(250, 250, 245));
     Program_3BTN.setBackground(new java.awt.Color(250, 250, 245));
     Program_4BTN.setBackground(new java.awt.Color(250, 250, 245));
@@ -121,24 +122,26 @@ private void resetButtonColors() {
         jLabel6 = new javax.swing.JLabel();
         Program_1BTN = new javax.swing.JButton();
         jPanel2 = new jPanelTransparent();
-        jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         jPanel3 = new jPanelTransparent();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
         jPanel4 = new jPanelTransparent();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        Program9BTN_Start = new javax.swing.JButton();
+        jLabel25 = new javax.swing.JLabel();
+        Program4BTN_Start = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -555,179 +558,196 @@ private void resetButtonColors() {
 
         jPanel2.setPreferredSize(new java.awt.Dimension(300, 400));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Input Wind Speed and Rainfall");
-
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Typhoon.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/37.png"))); // NOI18N
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel10.setText(" Type in current wind speed (in kph). ");
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel20.setText("Enter Customer Name");
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setText(" Type in rainfall (in mm). ");
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel23.setText("how much kWh was consumed.");
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel24.setText("Provide the name of the customer and");
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel27.setText("and Consumption");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel4))
-                .addGap(41, 41, 41))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
+                        .addGap(81, 81, 81)
                         .addComponent(jLabel7))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel11)))
-                .addContainerGap(89, Short.MAX_VALUE))
+                        .addGap(71, 71, 71)
+                        .addComponent(jLabel20))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(jLabel27))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel24)))
+                .addContainerGap(44, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel23)
+                .addGap(59, 59, 59))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addGap(58, 58, 58)
                 .addComponent(jLabel7)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel4)
-                .addGap(33, 33, 33)
-                .addComponent(jLabel10)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel27)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel11)
+                .addComponent(jLabel24)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel23)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Typhoon Alert Level Analyzer");
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setText("Be prepared, be safe. This program provides real-time alerts based on wind speed and rainfall,");
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("allowing communities to take timely action when a typhoon is on the way. Safety comes first!");
 
         jPanel3.setPreferredSize(new java.awt.Dimension(300, 400));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setText("Determine the Alert Level");
+        jLabel12.setText("Let the Program Compute the Charge");
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Typhoon-2.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/38.png"))); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel14.setText(" The system uses TCWS and Rainfall Advisory");
+        jLabel14.setText(" It applies the tiered rate depending on");
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel15.setText(" criteria to assign a typhoon signal number.");
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel22.setText("how much electricity was used.");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(26, Short.MAX_VALUE)
+                .addComponent(jLabel15)
+                .addGap(274, 274, 274))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(0, 89, Short.MAX_VALUE)
                 .addComponent(jLabel13)
                 .addGap(86, 86, 86))
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel14)))
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel14))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(jLabel12)))
+                        .addGap(62, 62, 62)
+                        .addComponent(jLabel22)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(57, 57, 57)
                 .addComponent(jLabel13)
-                .addGap(28, 28, 28)
+                .addGap(26, 26, 26)
                 .addComponent(jLabel12)
-                .addGap(35, 35, 35)
-                .addComponent(jLabel14)
                 .addGap(18, 18, 18)
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel15)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         jPanel4.setPreferredSize(new java.awt.Dimension(300, 400));
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel16.setText("Read the Safety Advisory");
+        jLabel16.setText("View the Bill");
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Typhoon-3.png"))); // NOI18N
-
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel18.setText(" You'll see the alert level and a helpful");
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/39.png"))); // NOI18N
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel19.setText("safety tip (e.g., evacuate or cancel classes). ");
+        jLabel19.setText("Get the customer’s name, total kWh,");
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel25.setText("and the amount they need to pay.");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel16)
-                .addGap(62, 62, 62))
-            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(jLabel17))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel19))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel18)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                    .addComponent(jLabel17)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addGap(27, 27, 27)))
+                .addGap(79, 79, 79))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 50, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel25))
+                .addGap(44, 44, 44))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(62, 62, 62)
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel16)
-                .addGap(34, 34, 34)
-                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel19)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel25)
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
-        Program9BTN_Start.setBackground(new java.awt.Color(250, 250, 245));
-        Program9BTN_Start.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Program9BTN_Start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/18.png"))); // NOI18N
-        Program9BTN_Start.setText("   LET'S GET IT ON!");
-        Program9BTN_Start.setToolTipText("");
-        Program9BTN_Start.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        Program9BTN_Start.addMouseListener(new java.awt.event.MouseAdapter() {
+        Program4BTN_Start.setBackground(new java.awt.Color(250, 250, 245));
+        Program4BTN_Start.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        Program4BTN_Start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/18.png"))); // NOI18N
+        Program4BTN_Start.setText("   LET'S GET IT ON!");
+        Program4BTN_Start.setToolTipText("");
+        Program4BTN_Start.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        Program4BTN_Start.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                Program9BTN_StartMouseEntered(evt);
+                Program4BTN_StartMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                Program9BTN_StartMouseExited(evt);
+                Program4BTN_StartMouseExited(evt);
             }
         });
-        Program9BTN_Start.addActionListener(new java.awt.event.ActionListener() {
+        Program4BTN_Start.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Program9BTN_StartActionPerformed(evt);
+                Program4BTN_StartActionPerformed(evt);
             }
         });
+
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Kuryente Bill Mo!");
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setText("Say goodbye to bill surprises! This tool generates your Meralco electricity bill based on your consumption,");
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel21.setText("giving you an accurate, real-time understanding of your energy usage and costs.");
 
         javax.swing.GroupLayout MainBoardLayout = new javax.swing.GroupLayout(MainBoard);
         MainBoard.setLayout(MainBoardLayout);
@@ -737,14 +757,6 @@ private void resetButtonColors() {
                 .addComponent(MenuIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel8)))
-                    .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(251, 251, 251)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MainBoardLayout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(82, 82, 82)
@@ -753,26 +765,35 @@ private void resetButtonColors() {
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MainBoardLayout.createSequentialGroup()
                         .addGap(478, 478, 478)
-                        .addComponent(Program9BTN_Start, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Program4BTN_Start, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(MainBoardLayout.createSequentialGroup()
+                        .addGap(406, 406, 406)
+                        .addComponent(jLabel5))
+                    .addGroup(MainBoardLayout.createSequentialGroup()
+                        .addGap(167, 167, 167)
+                        .addComponent(jLabel9))
+                    .addGroup(MainBoardLayout.createSequentialGroup()
+                        .addGap(267, 267, 267)
+                        .addComponent(jLabel21)))
                 .addContainerGap(94, Short.MAX_VALUE))
         );
         MainBoardLayout.setVerticalGroup(
             MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(MenuIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainBoardLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel21)
+                .addGap(74, 74, 74)
                 .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE))
                 .addGap(39, 39, 39)
-                .addComponent(Program9BTN_Start)
+                .addComponent(Program4BTN_Start)
                 .addGap(49, 49, 49))
         );
 
@@ -815,13 +836,13 @@ private void resetButtonColors() {
     }//GEN-LAST:event_ExitIconMouseClicked
 
     private void MaxIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaxIconMouseClicked
-        if(this.getExtendedState()!= Program_9.MAXIMIZED_BOTH)
+        if(this.getExtendedState()!= Program_4_Start.MAXIMIZED_BOTH)
         {
-            this.setExtendedState(Program_9.MAXIMIZED_BOTH);
+            this.setExtendedState(Program_4_Start.MAXIMIZED_BOTH);
         }
         else
         {
-            this.setExtendedState(Program_9.NORMAL);
+            this.setExtendedState(Program_4_Start.NORMAL);
         }
     }//GEN-LAST:event_MaxIconMouseClicked
 
@@ -842,64 +863,43 @@ private void resetButtonColors() {
 
     }//GEN-LAST:event_ExitIconMouseExited
 
-    private void ExitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBTNActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_ExitBTNActionPerformed
+    private void Program4BTN_StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program4BTN_StartActionPerformed
 
-    private void Program_2BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_2BTNActionPerformed
-        Program_2 program2 = new Program_2();
-        program2.setVisible(true);
-        this.setVisible(false);   
-    }//GEN-LAST:event_Program_2BTNActionPerformed
-
-    private void Program_3BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_3BTNActionPerformed
-        //Program_3 program3 = new Program_3();
-        //program3.setVisible(true);
+        resetButtonColors();
+        Program_3BTN.setBackground(new java.awt.Color(180, 100, 255));
+        Program_4 start3 = new Program_4();
+        start3.setVisible(true);
         this.setVisible(false);
+    }//GEN-LAST:event_Program4BTN_StartActionPerformed
 
-    }//GEN-LAST:event_Program_3BTNActionPerformed
+    private void Program4BTN_StartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program4BTN_StartMouseExited
+        Program4BTN_Start.setForeground(Color.BLACK);
+        Program4BTN_Start.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program4BTN_StartMouseExited
 
-    private void Program_4BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_4BTNActionPerformed
-        //Program_4 program4 = new Program_4();
-        //program4.setVisible(true);
+    private void Program4BTN_StartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program4BTN_StartMouseEntered
+        Program4BTN_Start.setForeground(Color.WHITE);
+        Program4BTN_Start.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program4BTN_StartMouseEntered
+
+    private void Program_1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_1BTNActionPerformed
+        //Program_1 program1 = new Program_1();
+        //program1.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_Program_4BTNActionPerformed
+    }//GEN-LAST:event_Program_1BTNActionPerformed
 
-    private void Program_5BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_5BTNActionPerformed
-        //Program_5 program5 = new Program_5();
-        //program5.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_5BTNActionPerformed
+    private void Program_1BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseExited
+        Program_1BTN.setBackground(Color.WHITE);
+        Program_1BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_1BTNMouseExited
 
-    private void Program_6BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_6BTNActionPerformed
-        //Program_6 program6 = new Program_6();
-        //program6.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_6BTNActionPerformed
-
-    private void Program_7BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_7BTNActionPerformed
-        //Program_7 program7 = new Program_7();
-        //program7.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_7BTNActionPerformed
-
-    private void Program_8BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_8BTNActionPerformed
-        //Program_8 program8 = new Program_8();
-        //program8.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_8BTNActionPerformed
-
-    private void Program_9BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_9BTNActionPerformed
-        Program_9 program9 = new Program_9();
-        program9.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_9BTNActionPerformed
-
-    private void Program_10BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_10BTNActionPerformed
-        Program_10 program10 = new Program_10();
-        program10.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_10BTNActionPerformed
+    private void Program_1BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseEntered
+        Program_1BTN.setBackground(new Color(150, 50, 230));
+        Program_1BTN.setForeground(Color.WHITE);
+        Program_1BTN.setBorderPainted(false);
+        Program_1BTN.setBorder(null);
+        Program_1BTN.setBorder(BorderFactory.createEmptyBorder());
+    }//GEN-LAST:event_Program_1BTNMouseEntered
 
     private void DashboardBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardBTNActionPerformed
         //Dashboard dashboard = new Dashboard();
@@ -907,155 +907,173 @@ private void resetButtonColors() {
         this.setVisible(false);
     }//GEN-LAST:event_DashboardBTNActionPerformed
 
-    private void Program9BTN_StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program9BTN_StartActionPerformed
-        
-        resetButtonColors();
-        Program_9BTN.setBackground(new java.awt.Color(180, 100, 255));
-        Program_9_Start start9 = new Program_9_Start();
-        start9.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program9BTN_StartActionPerformed
-
-    private void Program_1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_1BTNActionPerformed
-        Program_1 program1 = new Program_1();
-        program1.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_1BTNActionPerformed
-
-    private void Program_9BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseEntered
-        Program_9BTN.setBackground(new Color(150, 50, 230));
-        Program_9BTN.setForeground(Color.WHITE);
-    }//GEN-LAST:event_Program_9BTNMouseEntered
-
-    private void Program_9BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseExited
-        Program_9BTN.setBackground(Color.WHITE);
-        Program_9BTN.setForeground(Color.BLACK);
-    }//GEN-LAST:event_Program_9BTNMouseExited
-
-    private void Program_10BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseEntered
-        Program_10BTN.setBackground(new Color(150, 50, 230));
-        Program_10BTN.setForeground(Color.WHITE);
-    }//GEN-LAST:event_Program_10BTNMouseEntered
-
-    private void Program_10BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseExited
-        Program_10BTN.setBackground(Color.WHITE);
-        Program_10BTN.setForeground(Color.BLACK);
-    }//GEN-LAST:event_Program_10BTNMouseExited
-
-    private void Program_1BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseExited
-        Program_1BTN.setBackground(Color.WHITE);
-        Program_1BTN.setForeground(Color.BLACK);
-
-    }//GEN-LAST:event_Program_1BTNMouseExited
-
-    private void Program_1BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseEntered
-        Program_1BTN.setBackground(new Color(150, 50, 230));
-        Program_1BTN.setForeground(Color.WHITE); 
-        Program_1BTN.setBorderPainted(false);
-        Program_1BTN.setBorder(null);
-        Program_1BTN.setBorder(BorderFactory.createEmptyBorder());
-
-    }//GEN-LAST:event_Program_1BTNMouseEntered
+    private void DashboardBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseExited
+        DashboardBTN.setForeground(Color.BLACK);
+        DashboardBTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_DashboardBTNMouseExited
 
     private void DashboardBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseEntered
         DashboardBTN.setForeground(Color.WHITE);
         DashboardBTN.setBackground(new Color(150, 50, 230));
     }//GEN-LAST:event_DashboardBTNMouseEntered
 
-    private void DashboardBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseExited
-        DashboardBTN.setForeground(Color.BLACK);
-        DashboardBTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_DashboardBTNMouseExited
+    private void Program_10BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_10BTNActionPerformed
+        //Program_10 program10 = new Program_10();
+        //program10.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_10BTNActionPerformed
 
-    private void ExitBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseEntered
-        ExitBTN.setForeground(Color.WHITE);
-        ExitBTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_ExitBTNMouseEntered
+    private void Program_10BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseExited
+        Program_10BTN.setBackground(Color.WHITE);
+        Program_10BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_10BTNMouseExited
 
-    private void ExitBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseExited
-        ExitBTN.setForeground(Color.BLACK);
-        ExitBTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_ExitBTNMouseExited
+    private void Program_10BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseEntered
+        Program_10BTN.setBackground(new Color(150, 50, 230));
+        Program_10BTN.setForeground(Color.WHITE);
+    }//GEN-LAST:event_Program_10BTNMouseEntered
 
-    private void Program_2BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseEntered
-        Program_2BTN.setForeground(Color.WHITE);
-        Program_2BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_2BTNMouseEntered
+    private void Program_9BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_9BTNActionPerformed
+        //Program_9 program9 = new Program_9();
+        //program9.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_9BTNActionPerformed
 
-    private void Program_2BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseExited
-        Program_2BTN.setForeground(Color.BLACK);
-        Program_2BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_2BTNMouseExited
+    private void Program_9BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseExited
+        Program_9BTN.setBackground(Color.WHITE);
+        Program_9BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_9BTNMouseExited
 
-    private void Program_3BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseEntered
-        Program_3BTN.setForeground(Color.WHITE);
-        Program_3BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_3BTNMouseEntered
+    private void Program_9BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseEntered
+        Program_9BTN.setBackground(new Color(150, 50, 230));
+        Program_9BTN.setForeground(Color.WHITE);
+    }//GEN-LAST:event_Program_9BTNMouseEntered
 
-    private void Program_3BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseExited
-        Program_3BTN.setForeground(Color.BLACK);
-        Program_3BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_3BTNMouseExited
-
-    private void Program_4BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseEntered
-        Program_4BTN.setForeground(Color.WHITE);
-        Program_4BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_4BTNMouseEntered
-
-    private void Program_4BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseExited
-        Program_4BTN.setForeground(Color.BLACK);
-        Program_4BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_4BTNMouseExited
-
-    private void Program_5BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseEntered
-        Program_5BTN.setForeground(Color.WHITE);
-        Program_5BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_5BTNMouseEntered
-
-    private void Program_5BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseExited
-        Program_5BTN.setForeground(Color.BLACK);
-        Program_5BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_5BTNMouseExited
-
-    private void Program_6BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseEntered
-        Program_6BTN.setForeground(Color.WHITE);
-        Program_6BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_6BTNMouseEntered
-
-    private void Program_6BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseExited
-        Program_6BTN.setForeground(Color.BLACK);
-        Program_6BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_6BTNMouseExited
-
-    private void Program_7BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseEntered
-        Program_7BTN.setForeground(Color.WHITE);
-        Program_7BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_7BTNMouseEntered
-
-    private void Program_7BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseExited
-        Program_7BTN.setForeground(Color.BLACK);
-        Program_7BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_7BTNMouseExited
-
-    private void Program_8BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseEntered
-        Program_8BTN.setForeground(Color.WHITE);
-        Program_8BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_8BTNMouseEntered
+    private void Program_8BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_8BTNActionPerformed
+        //Program_8 program8 = new Program_8();
+        //program8.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_8BTNActionPerformed
 
     private void Program_8BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseExited
         Program_8BTN.setForeground(Color.BLACK);
         Program_8BTN.setBackground(Color.WHITE);
     }//GEN-LAST:event_Program_8BTNMouseExited
 
-    private void Program9BTN_StartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program9BTN_StartMouseEntered
-        Program9BTN_Start.setForeground(Color.WHITE);
-        Program9BTN_Start.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program9BTN_StartMouseEntered
+    private void Program_8BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseEntered
+        Program_8BTN.setForeground(Color.WHITE);
+        Program_8BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_8BTNMouseEntered
 
-    private void Program9BTN_StartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program9BTN_StartMouseExited
-        Program9BTN_Start.setForeground(Color.BLACK);
-        Program9BTN_Start.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program9BTN_StartMouseExited
+    private void Program_7BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_7BTNActionPerformed
+        //Program_7 program7 = new Program_7();
+        //program7.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_7BTNActionPerformed
+
+    private void Program_7BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseExited
+        Program_7BTN.setForeground(Color.BLACK);
+        Program_7BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_7BTNMouseExited
+
+    private void Program_7BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseEntered
+        Program_7BTN.setForeground(Color.WHITE);
+        Program_7BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_7BTNMouseEntered
+
+    private void Program_6BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_6BTNActionPerformed
+        //Program_6 program6 = new Program_6();
+        //program6.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_6BTNActionPerformed
+
+    private void Program_6BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseExited
+        Program_6BTN.setForeground(Color.BLACK);
+        Program_6BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_6BTNMouseExited
+
+    private void Program_6BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseEntered
+        Program_6BTN.setForeground(Color.WHITE);
+        Program_6BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_6BTNMouseEntered
+
+    private void Program_5BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_5BTNActionPerformed
+        //Program_5 program5 = new Program_5();
+        //program5.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_5BTNActionPerformed
+
+    private void Program_5BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseExited
+        Program_5BTN.setForeground(Color.BLACK);
+        Program_5BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_5BTNMouseExited
+
+    private void Program_5BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseEntered
+        Program_5BTN.setForeground(Color.WHITE);
+        Program_5BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_5BTNMouseEntered
+
+    private void Program_4BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_4BTNActionPerformed
+        Program_4 program4 = new Program_4();
+        program4.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_4BTNActionPerformed
+
+    private void Program_4BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseExited
+        Program_4BTN.setForeground(Color.BLACK);
+        Program_4BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_4BTNMouseExited
+
+    private void Program_4BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseEntered
+        Program_4BTN.setForeground(Color.WHITE);
+        Program_4BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_4BTNMouseEntered
+
+    private void Program_3BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_3BTNActionPerformed
+        //Program_3_Start program3 = new Program_4_Start();
+        //program3.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_3BTNActionPerformed
+
+    private void Program_3BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseExited
+        Program_3BTN.setForeground(Color.BLACK);
+        Program_3BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_3BTNMouseExited
+
+    private void Program_3BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseEntered
+        Program_3BTN.setForeground(Color.WHITE);
+        Program_3BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_3BTNMouseEntered
+
+    private void Program_2BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_2BTNActionPerformed
+        //Program_2 program2 = new Program_2();
+        //program2.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_2BTNActionPerformed
+
+    private void Program_2BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseExited
+        Program_2BTN.setForeground(Color.BLACK);
+        Program_2BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_2BTNMouseExited
+
+    private void Program_2BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseEntered
+        Program_2BTN.setForeground(Color.WHITE);
+        Program_2BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_2BTNMouseEntered
+
+    private void ExitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBTNActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ExitBTNActionPerformed
+
+    private void ExitBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseExited
+        ExitBTN.setForeground(Color.BLACK);
+        ExitBTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_ExitBTNMouseExited
+
+    private void ExitBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseEntered
+        ExitBTN.setForeground(Color.WHITE);
+        ExitBTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_ExitBTNMouseEntered
 
     /**
      * @param args the command line arguments
@@ -1074,20 +1092,27 @@ private void resetButtonColors() {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_4_Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_4_Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_4_Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_4_Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Program_9().setVisible(true);
+                new Program_4_Start().setVisible(true);
             }
         });
     }
@@ -1105,7 +1130,7 @@ private void resetButtonColors() {
     private javax.swing.JPanel MainBoard;
     private javax.swing.JLabel MaxIcon;
     private javax.swing.JPanel MenuIcon;
-    private javax.swing.JButton Program9BTN_Start;
+    private javax.swing.JButton Program4BTN_Start;
     private javax.swing.JButton Program_10BTN;
     private javax.swing.JButton Program_1BTN;
     private javax.swing.JButton Program_2BTN;
@@ -1118,23 +1143,25 @@ private void resetButtonColors() {
     private javax.swing.JButton Program_9BTN;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

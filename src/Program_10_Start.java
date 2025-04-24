@@ -7,13 +7,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Program_9 extends javax.swing.JFrame {
+public class Program_10_Start extends javax.swing.JFrame {
 
     /**
-     * Creates new form Program_9
+     * Creates new form Program_1
      */
     
-    public Program_9() {
+    public Program_10_Start() {
         initComponents();
         this.setUndecorated(true);
     }
@@ -74,6 +74,7 @@ class jPanelTransparent extends JPanel {
 
 private void resetButtonColors() {
     // Reset all buttons to their default color
+    Program_1BTN.setBackground(new java.awt.Color(250, 250, 245));
     Program_2BTN.setBackground(new java.awt.Color(250, 250, 245));
     Program_3BTN.setBackground(new java.awt.Color(250, 250, 245));
     Program_4BTN.setBackground(new java.awt.Color(250, 250, 245));
@@ -121,24 +122,23 @@ private void resetButtonColors() {
         jLabel6 = new javax.swing.JLabel();
         Program_1BTN = new javax.swing.JButton();
         jPanel2 = new jPanelTransparent();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        Input_Rain = new javax.swing.JTextField();
+        SubmitBTN = new javax.swing.JButton();
+        jLabel24 = new javax.swing.JLabel();
+        Input_Wind = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jPanel4 = new jPanelTransparent();
+        jLabel18 = new javax.swing.JLabel();
+        ClearBTN = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        Output_TCWS = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        Output_Rainfall = new javax.swing.JTextArea();
+        jLabel19 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jPanel3 = new jPanelTransparent();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jPanel4 = new jPanelTransparent();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        Program9BTN_Start = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -555,50 +555,170 @@ private void resetButtonColors() {
 
         jPanel2.setPreferredSize(new java.awt.Dimension(300, 400));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Input Wind Speed and Rainfall");
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel20.setText("Choose Region:");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Typhoon.png"))); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel13.setText("INPUT");
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel10.setText(" Type in current wind speed (in kph). ");
+        Input_Rain.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Input_Rain.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Input_RainMouseClicked(evt);
+            }
+        });
+        Input_Rain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Input_RainActionPerformed(evt);
+            }
+        });
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel11.setText(" Type in rainfall (in mm). ");
+        SubmitBTN.setBackground(new java.awt.Color(250, 250, 245));
+        SubmitBTN.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        SubmitBTN.setText("Submit");
+        SubmitBTN.setBorder(null);
+        SubmitBTN.setBorderPainted(false);
+        SubmitBTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SubmitBTNMouseClicked(evt);
+            }
+        });
+        SubmitBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SubmitBTNActionPerformed(evt);
+            }
+        });
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel24.setText("Enter Buyer's Name:");
+
+        Input_Wind.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Input_Wind.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Input_WindMouseClicked(evt);
+            }
+        });
+        Input_Wind.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Input_WindActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel21.setText("Enter Package Weight:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel4))
-                .addGap(41, 41, 41))
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addComponent(SubmitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(jLabel7))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jLabel11)))
-                .addContainerGap(89, Short.MAX_VALUE))
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Input_Wind, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLabel13)
+                            .addGap(147, 147, 147))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(25, 25, 25)))
+                    .addComponent(Input_Rain, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel7)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel4)
-                .addGap(33, 33, 33)
-                .addComponent(jLabel10)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel13)
+                .addGap(42, 42, 42)
+                .addComponent(jLabel24)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel11)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(Input_Wind, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel20)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Input_Rain, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(SubmitBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+        );
+
+        jPanel4.setPreferredSize(new java.awt.Dimension(300, 400));
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel18.setText("RAINFALL ADVISORY ");
+
+        ClearBTN.setBackground(new java.awt.Color(250, 250, 245));
+        ClearBTN.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ClearBTN.setText("Clear");
+        ClearBTN.setBorder(null);
+        ClearBTN.setBorderPainted(false);
+        ClearBTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ClearBTNMouseClicked(evt);
+            }
+        });
+        ClearBTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClearBTNActionPerformed(evt);
+            }
+        });
+
+        Output_TCWS.setColumns(20);
+        Output_TCWS.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Output_TCWS.setRows(5);
+        jScrollPane3.setViewportView(Output_TCWS);
+
+        Output_Rainfall.setColumns(20);
+        Output_Rainfall.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Output_Rainfall.setRows(5);
+        jScrollPane4.setViewportView(Output_Rainfall);
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel19.setText("TCWS ADVISORY");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel18)
+                .addGap(78, 78, 78))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(271, 271, 271))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(ClearBTN, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
@@ -607,127 +727,7 @@ private void resetButtonColors() {
         jLabel5.setText("Typhoon Alert Level Analyzer");
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setText("Be prepared, be safe. This program provides real-time alerts based on wind speed and rainfall,");
-
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("allowing communities to take timely action when a typhoon is on the way. Safety comes first!");
-
-        jPanel3.setPreferredSize(new java.awt.Dimension(300, 400));
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setText("Determine the Alert Level");
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Typhoon-2.png"))); // NOI18N
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel14.setText(" The system uses TCWS and Rainfall Advisory");
-
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel15.setText(" criteria to assign a typhoon signal number.");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 89, Short.MAX_VALUE)
-                .addComponent(jLabel13)
-                .addGap(86, 86, 86))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel14)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(jLabel12)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel13)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel12)
-                .addGap(35, 35, 35)
-                .addComponent(jLabel14)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel15)
-                .addContainerGap(61, Short.MAX_VALUE))
-        );
-
-        jPanel4.setPreferredSize(new java.awt.Dimension(300, 400));
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel16.setText("Read the Safety Advisory");
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/Typhoon-3.png"))); // NOI18N
-
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel18.setText(" You'll see the alert level and a helpful");
-
-        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel19.setText("safety tip (e.g., evacuate or cancel classes). ");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel16)
-                .addGap(62, 62, 62))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(jLabel17))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel19))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel18)))
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel16)
-                .addGap(34, 34, 34)
-                .addComponent(jLabel18)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel19)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        Program9BTN_Start.setBackground(new java.awt.Color(250, 250, 245));
-        Program9BTN_Start.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Program9BTN_Start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/18.png"))); // NOI18N
-        Program9BTN_Start.setText("   LET'S GET IT ON!");
-        Program9BTN_Start.setToolTipText("");
-        Program9BTN_Start.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        Program9BTN_Start.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                Program9BTN_StartMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                Program9BTN_StartMouseExited(evt);
-            }
-        });
-        Program9BTN_Start.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Program9BTN_StartActionPerformed(evt);
-            }
-        });
+        jLabel8.setText("Know Your Shipping Cost!");
 
         javax.swing.GroupLayout MainBoardLayout = new javax.swing.GroupLayout(MainBoard);
         MainBoard.setLayout(MainBoardLayout);
@@ -737,43 +737,31 @@ private void resetButtonColors() {
                 .addComponent(MenuIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(230, 230, 230)
-                        .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel8)))
-                    .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(251, 251, 251)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MainBoardLayout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(82, 82, 82)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(85, 85, 85)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 1101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(MainBoardLayout.createSequentialGroup()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(51, 51, 51)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 689, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(478, 478, 478)
-                        .addComponent(Program9BTN_Start, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(94, Short.MAX_VALUE))
+                        .addGap(490, 490, 490)
+                        .addComponent(jLabel8)))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         MainBoardLayout.setVerticalGroup(
             MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(MenuIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainBoardLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addContainerGap(49, Short.MAX_VALUE)
                 .addComponent(jLabel5)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE))
-                .addGap(39, 39, 39)
-                .addComponent(Program9BTN_Start)
-                .addGap(49, 49, 49))
+                .addGap(93, 93, 93)
+                .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE))
+                .addGap(63, 63, 63))
         );
 
         getContentPane().add(MainBoard, java.awt.BorderLayout.CENTER);
@@ -815,13 +803,13 @@ private void resetButtonColors() {
     }//GEN-LAST:event_ExitIconMouseClicked
 
     private void MaxIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaxIconMouseClicked
-        if(this.getExtendedState()!= Program_9.MAXIMIZED_BOTH)
+        if(this.getExtendedState()!= Program_1.MAXIMIZED_BOTH)
         {
-            this.setExtendedState(Program_9.MAXIMIZED_BOTH);
+            this.setExtendedState(Program_1.MAXIMIZED_BOTH);
         }
         else
         {
-            this.setExtendedState(Program_9.NORMAL);
+            this.setExtendedState(Program_1.NORMAL);
         }
     }//GEN-LAST:event_MaxIconMouseClicked
 
@@ -842,131 +830,6 @@ private void resetButtonColors() {
 
     }//GEN-LAST:event_ExitIconMouseExited
 
-    private void ExitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBTNActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_ExitBTNActionPerformed
-
-    private void Program_2BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_2BTNActionPerformed
-        Program_2 program2 = new Program_2();
-        program2.setVisible(true);
-        this.setVisible(false);   
-    }//GEN-LAST:event_Program_2BTNActionPerformed
-
-    private void Program_3BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_3BTNActionPerformed
-        //Program_3 program3 = new Program_3();
-        //program3.setVisible(true);
-        this.setVisible(false);
-
-    }//GEN-LAST:event_Program_3BTNActionPerformed
-
-    private void Program_4BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_4BTNActionPerformed
-        //Program_4 program4 = new Program_4();
-        //program4.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_4BTNActionPerformed
-
-    private void Program_5BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_5BTNActionPerformed
-        //Program_5 program5 = new Program_5();
-        //program5.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_5BTNActionPerformed
-
-    private void Program_6BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_6BTNActionPerformed
-        //Program_6 program6 = new Program_6();
-        //program6.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_6BTNActionPerformed
-
-    private void Program_7BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_7BTNActionPerformed
-        //Program_7 program7 = new Program_7();
-        //program7.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_7BTNActionPerformed
-
-    private void Program_8BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_8BTNActionPerformed
-        //Program_8 program8 = new Program_8();
-        //program8.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_8BTNActionPerformed
-
-    private void Program_9BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_9BTNActionPerformed
-        Program_9 program9 = new Program_9();
-        program9.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_9BTNActionPerformed
-
-    private void Program_10BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_10BTNActionPerformed
-        Program_10 program10 = new Program_10();
-        program10.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_10BTNActionPerformed
-
-    private void DashboardBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardBTNActionPerformed
-        //Dashboard dashboard = new Dashboard();
-        //dashboard.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_DashboardBTNActionPerformed
-
-    private void Program9BTN_StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program9BTN_StartActionPerformed
-        
-        resetButtonColors();
-        Program_9BTN.setBackground(new java.awt.Color(180, 100, 255));
-        Program_9_Start start9 = new Program_9_Start();
-        start9.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program9BTN_StartActionPerformed
-
-    private void Program_1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_1BTNActionPerformed
-        Program_1 program1 = new Program_1();
-        program1.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_1BTNActionPerformed
-
-    private void Program_9BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseEntered
-        Program_9BTN.setBackground(new Color(150, 50, 230));
-        Program_9BTN.setForeground(Color.WHITE);
-    }//GEN-LAST:event_Program_9BTNMouseEntered
-
-    private void Program_9BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseExited
-        Program_9BTN.setBackground(Color.WHITE);
-        Program_9BTN.setForeground(Color.BLACK);
-    }//GEN-LAST:event_Program_9BTNMouseExited
-
-    private void Program_10BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseEntered
-        Program_10BTN.setBackground(new Color(150, 50, 230));
-        Program_10BTN.setForeground(Color.WHITE);
-    }//GEN-LAST:event_Program_10BTNMouseEntered
-
-    private void Program_10BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseExited
-        Program_10BTN.setBackground(Color.WHITE);
-        Program_10BTN.setForeground(Color.BLACK);
-    }//GEN-LAST:event_Program_10BTNMouseExited
-
-    private void Program_1BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseExited
-        Program_1BTN.setBackground(Color.WHITE);
-        Program_1BTN.setForeground(Color.BLACK);
-
-    }//GEN-LAST:event_Program_1BTNMouseExited
-
-    private void Program_1BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseEntered
-        Program_1BTN.setBackground(new Color(150, 50, 230));
-        Program_1BTN.setForeground(Color.WHITE); 
-        Program_1BTN.setBorderPainted(false);
-        Program_1BTN.setBorder(null);
-        Program_1BTN.setBorder(BorderFactory.createEmptyBorder());
-
-    }//GEN-LAST:event_Program_1BTNMouseEntered
-
-    private void DashboardBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseEntered
-        DashboardBTN.setForeground(Color.WHITE);
-        DashboardBTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_DashboardBTNMouseEntered
-
-    private void DashboardBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseExited
-        DashboardBTN.setForeground(Color.BLACK);
-        DashboardBTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_DashboardBTNMouseExited
-
     private void ExitBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseEntered
         ExitBTN.setForeground(Color.WHITE);
         ExitBTN.setBackground(new Color(150, 50, 230));
@@ -976,6 +839,10 @@ private void resetButtonColors() {
         ExitBTN.setForeground(Color.BLACK);
         ExitBTN.setBackground(Color.WHITE);
     }//GEN-LAST:event_ExitBTNMouseExited
+
+    private void ExitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBTNActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_ExitBTNActionPerformed
 
     private void Program_2BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseEntered
         Program_2BTN.setForeground(Color.WHITE);
@@ -987,6 +854,12 @@ private void resetButtonColors() {
         Program_2BTN.setBackground(Color.WHITE);
     }//GEN-LAST:event_Program_2BTNMouseExited
 
+    private void Program_2BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_2BTNActionPerformed
+        Program_2 program2 = new Program_2();
+        program2.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_2BTNActionPerformed
+
     private void Program_3BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseEntered
         Program_3BTN.setForeground(Color.WHITE);
         Program_3BTN.setBackground(new Color(150, 50, 230));
@@ -996,6 +869,12 @@ private void resetButtonColors() {
         Program_3BTN.setForeground(Color.BLACK);
         Program_3BTN.setBackground(Color.WHITE);
     }//GEN-LAST:event_Program_3BTNMouseExited
+
+    private void Program_3BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_3BTNActionPerformed
+        //Program_3 program3 = new Program_3();
+        //program3.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_3BTNActionPerformed
 
     private void Program_4BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseEntered
         Program_4BTN.setForeground(Color.WHITE);
@@ -1007,6 +886,12 @@ private void resetButtonColors() {
         Program_4BTN.setBackground(Color.WHITE);
     }//GEN-LAST:event_Program_4BTNMouseExited
 
+    private void Program_4BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_4BTNActionPerformed
+        //Program_4 program4 = new Program_4();
+        //program4.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_4BTNActionPerformed
+
     private void Program_5BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseEntered
         Program_5BTN.setForeground(Color.WHITE);
         Program_5BTN.setBackground(new Color(150, 50, 230));
@@ -1016,6 +901,12 @@ private void resetButtonColors() {
         Program_5BTN.setForeground(Color.BLACK);
         Program_5BTN.setBackground(Color.WHITE);
     }//GEN-LAST:event_Program_5BTNMouseExited
+
+    private void Program_5BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_5BTNActionPerformed
+        //Program_5 program5 = new Program_5();
+        //program5.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_5BTNActionPerformed
 
     private void Program_6BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseEntered
         Program_6BTN.setForeground(Color.WHITE);
@@ -1027,6 +918,12 @@ private void resetButtonColors() {
         Program_6BTN.setBackground(Color.WHITE);
     }//GEN-LAST:event_Program_6BTNMouseExited
 
+    private void Program_6BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_6BTNActionPerformed
+        //Program_6 program6 = new Program_6();
+        //program6.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_6BTNActionPerformed
+
     private void Program_7BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseEntered
         Program_7BTN.setForeground(Color.WHITE);
         Program_7BTN.setBackground(new Color(150, 50, 230));
@@ -1036,6 +933,12 @@ private void resetButtonColors() {
         Program_7BTN.setForeground(Color.BLACK);
         Program_7BTN.setBackground(Color.WHITE);
     }//GEN-LAST:event_Program_7BTNMouseExited
+
+    private void Program_7BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_7BTNActionPerformed
+        //Program_7 program7 = new Program_7();
+        //program7.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_7BTNActionPerformed
 
     private void Program_8BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseEntered
         Program_8BTN.setForeground(Color.WHITE);
@@ -1047,15 +950,278 @@ private void resetButtonColors() {
         Program_8BTN.setBackground(Color.WHITE);
     }//GEN-LAST:event_Program_8BTNMouseExited
 
-    private void Program9BTN_StartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program9BTN_StartMouseEntered
-        Program9BTN_Start.setForeground(Color.WHITE);
-        Program9BTN_Start.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program9BTN_StartMouseEntered
+    private void Program_8BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_8BTNActionPerformed
+        //Program_8 program8 = new Program_8();
+        //program8.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_8BTNActionPerformed
 
-    private void Program9BTN_StartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program9BTN_StartMouseExited
-        Program9BTN_Start.setForeground(Color.BLACK);
-        Program9BTN_Start.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program9BTN_StartMouseExited
+    private void Program_9BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseEntered
+        Program_9BTN.setBackground(new Color(150, 50, 230));
+        Program_9BTN.setForeground(Color.WHITE);
+    }//GEN-LAST:event_Program_9BTNMouseEntered
+
+    private void Program_9BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseExited
+        Program_9BTN.setBackground(Color.WHITE);
+        Program_9BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_9BTNMouseExited
+
+    private void Program_9BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_9BTNActionPerformed
+        Program_9 program9 = new Program_9();
+        program9.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_9BTNActionPerformed
+
+    private void Program_10BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseEntered
+        Program_10BTN.setBackground(new Color(150, 50, 230));
+        Program_10BTN.setForeground(Color.WHITE);
+    }//GEN-LAST:event_Program_10BTNMouseEntered
+
+    private void Program_10BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseExited
+        Program_10BTN.setBackground(Color.WHITE);
+        Program_10BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_10BTNMouseExited
+
+    private void Program_10BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_10BTNActionPerformed
+        Program_10 program10 = new Program_10();
+        program10.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_10BTNActionPerformed
+
+    private void DashboardBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseEntered
+        DashboardBTN.setForeground(Color.WHITE);
+        DashboardBTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_DashboardBTNMouseEntered
+
+    private void DashboardBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseExited
+        DashboardBTN.setForeground(Color.BLACK);
+        DashboardBTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_DashboardBTNMouseExited
+
+    private void DashboardBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardBTNActionPerformed
+        //Dashboard dashboard = new Dashboard();
+        //dashboard.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_DashboardBTNActionPerformed
+
+    private void Program_1BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseEntered
+        Program_1BTN.setBackground(new Color(150, 50, 230));
+        Program_1BTN.setForeground(Color.WHITE);
+        Program_1BTN.setBorderPainted(false);
+        Program_1BTN.setBorder(null);
+        Program_1BTN.setBorder(BorderFactory.createEmptyBorder());
+    }//GEN-LAST:event_Program_1BTNMouseEntered
+
+    private void Program_1BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseExited
+        Program_1BTN.setBackground(Color.WHITE);
+        Program_1BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_1BTNMouseExited
+
+    private void Program_1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_1BTNActionPerformed
+        Program_1 program1 = new Program_1();
+        program1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Program_1BTNActionPerformed
+
+    private void ClearBTNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearBTNMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ClearBTNMouseClicked
+
+    private void Input_RainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Input_RainMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Input_RainMouseClicked
+
+    private void SubmitBTNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitBTNMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SubmitBTNMouseClicked
+
+    private void Input_WindMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Input_WindMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Input_WindMouseClicked
+
+    private void ClearBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearBTNActionPerformed
+        Input_Wind.setText("");
+        Input_Rain.setText("");
+        Output_TCWS.setText("");
+        Output_Rainfall.setText("");
+    }//GEN-LAST:event_ClearBTNActionPerformed
+
+    private void Input_WindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Input_WindActionPerformed
+
+    }//GEN-LAST:event_Input_WindActionPerformed
+
+    private void Input_RainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Input_RainActionPerformed
+
+    }//GEN-LAST:event_Input_RainActionPerformed
+
+    private void SubmitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitBTNActionPerformed
+
+try {
+    String inputWind = Input_Wind.getText();
+    int windSpeed = Integer.parseInt(inputWind);
+
+    String tcwsAdvisory = "";
+
+    if (windSpeed >= 30 && windSpeed < 60) {
+        tcwsAdvisory =
+            "----------------------------------------------------\n" +
+            "|     Tropical Cyclone Warning Signal 1     |\n" +
+            "----------------------------------------------------\n\n" +
+            "Wind Speed: 30 – 60 km/h\n\n" +
+            "Signal: No. 1\n\n" +
+            "Effect: Minimal to light damage.\n" +
+            "Possible flooding in low-lying areas.\n\n" +
+            "----------------------------------------------------";
+    } 
+    else if (windSpeed >= 60 && windSpeed < 100) {
+        tcwsAdvisory =
+            "----------------------------------------------------\n" +
+            "|     Tropical Cyclone Warning Signal 2      |\n" +
+            "----------------------------------------------------\n\n" +
+            "Wind Speed: 60 – 100 km/h\n\n" +
+            "Signal: No. 2\n\n" +
+            "Effect: Moderate damage.\n" +
+            "Flooding expected in low-lying areas.\n\n" +
+            "----------------------------------------------------";
+    } 
+    else if (windSpeed >= 100 && windSpeed < 150) {
+        tcwsAdvisory =
+            "----------------------------------------------------\n" +
+            "|     Tropical Cyclone Warning Signal 3      |\n" +
+            "----------------------------------------------------\n\n" +
+            "Wind Speed: 100 – 150 km/h\n\n" +
+            "Signal: No. 3\n\n" +
+            "Effect: Significant damage.\n" +
+            "Widespread flooding.\n\n" +
+            "----------------------------------------------------";
+    } 
+    else if (windSpeed >= 150 && windSpeed < 200) {
+        tcwsAdvisory =
+            "----------------------------------------------------\n" +
+            "|     Tropical Cyclone Warning Signal 4      |\n" +
+            "----------------------------------------------------\n\n" +
+            "Wind Speed: 150 – 200 km/h\n\n" +
+            "Signal: No. 4\n\n" +
+            "Effect: Extensive damage.\n" +
+            "Major flooding likely.\n\n" +
+            "----------------------------------------------------";
+    } 
+    else if (windSpeed >= 200) {
+        tcwsAdvisory =
+            "----------------------------------------------------\n" +
+            "|     Tropical Cyclone Warning Signal 5      |\n" +
+            "----------------------------------------------------\n\n" +
+            "Wind Speed: 200 km/h or more\n\n" +
+            "Signal: No. 5\n\n" +
+            "Effect: Catastrophic damage.\n" +
+            "Extreme flooding, widespread devastation.\n\n" +
+            "----------------------------------------------------";
+    } 
+    else {
+        tcwsAdvisory =
+            "----------------------------------------------------\n" +
+            "|     No Tropical Cyclone Warning      |\n" +
+            "----------------------------------------------------\n\n" +
+            "Wind Speed too low to raise\n" +
+            "an official warning.\n\n" +
+            "----------------------------------------------------";
+    }
+
+    Output_TCWS.setText(tcwsAdvisory);
+
+} catch (NumberFormatException e) {
+    Output_TCWS.setText(
+        "----------------------------------------------------\n" +
+        "|               Invalid Input Exception            |\n" +
+        "----------------------------------------------------\n\n" +
+        "Error: Please enter a valid number for\n" +
+        "wind speed in kilometers per hour (km/h).\n\n" +
+        "----------------------------------------------------"
+    );
+} catch (Exception e) {
+    Output_TCWS.setText(
+        "----------------------------------------------------\n" +
+        "|               General Exception                 |\n" +
+        "----------------------------------------------------\n\n" +
+        "Error: " + e.getMessage() + "\n\n" +
+        "----------------------------------------------------"
+    );
+}
+
+
+
+
+        try {
+            String inputRain = Input_Rain.getText();
+            double rainfall = Double.parseDouble(inputRain);
+
+            String rainAdvisory = "";
+
+            if (rainfall >= 7.5 && rainfall < 15.0) {
+                rainAdvisory =
+                    "----------------------------------------------------\n" +
+                    "|            Rainfall Advisory Level 1            |\n" +
+                    "----------------------------------------------------\n\n" +
+                    "Rainfall: 7.5 – 14.9 mm\n\n" +
+                    "Advisory: Light rainfall\n\n" +
+                    "Effect: Possible light flooding\n" +
+                    "in low-lying areas.\n\n" +
+                    "----------------------------------------------------";
+            } 
+            else if (rainfall >= 15.0 && rainfall < 30.0) {
+                rainAdvisory =
+                    "----------------------------------------------------\n" +
+                    "|            Rainfall Advisory Level 2            |\n" +
+                    "----------------------------------------------------\n\n" +
+                    "Rainfall: 15 – 29.9 mm\n\n" +
+                    "Advisory: Moderate rainfall\n\n" +
+                    "Effect: Flooding likely in\n" +
+                    "low-lying or urban areas.\n\n" +
+                    "----------------------------------------------------";
+            } 
+            else if (rainfall >= 30.0) {
+                rainAdvisory =
+                    "----------------------------------------------------\n" +
+                    "|            Rainfall Advisory Level 3            |\n" +
+                    "----------------------------------------------------\n\n" +
+                    "Rainfall: 30 mm or more\n\n" +
+                    "Advisory: Heavy rainfall\n\n" +
+                    "Effect: Widespread flooding.\n" +
+                    "Avoid outdoor activities.\n\n" +
+                    "----------------------------------------------------";
+            } 
+            else {
+                rainAdvisory =
+                    "----------------------------------------------------\n" +
+                    "|            No Rainfall Advisory                |\n" +
+                    "----------------------------------------------------\n\n" +
+                    "Rainfall too low to raise\n" +
+                    "an official warning.\n\n" +
+                    "----------------------------------------------------";
+            }
+
+            Output_Rainfall.setText(rainAdvisory);
+
+        } catch (NumberFormatException e) {
+            Output_Rainfall.setText(
+                "----------------------------------------------------\n" +
+                "|               Invalid Input Exception           |\n" +
+                "----------------------------------------------------\n\n" +
+                "Error: Please enter a valid number for\n" +
+                "rainfall in millimeters (mm).\n\n" +
+                "----------------------------------------------------"
+            );
+        } catch (Exception e) {
+            Output_Rainfall.setText(
+                "----------------------------------------------------\n" +
+                "|               General Exception                |\n" +
+                "----------------------------------------------------\n\n" +
+                "Error: " + e.getMessage() + "\n\n" +
+                "----------------------------------------------------"
+            );
+        }
+
+    }//GEN-LAST:event_SubmitBTNActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1074,20 +1240,20 @@ private void resetButtonColors() {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Program_9().setVisible(true);
+                new Program_1().setVisible(true);
             }
         });
     }
@@ -1096,16 +1262,20 @@ private void resetButtonColors() {
     private javax.swing.JPanel BTNClose;
     private javax.swing.JPanel BTNMax;
     private javax.swing.JPanel BTNMin;
+    private javax.swing.JButton ClearBTN;
     private javax.swing.JButton DashboardBTN;
     private javax.swing.JButton ExitBTN;
     private javax.swing.JLabel ExitIcon;
     private javax.swing.JPanel Header;
     private javax.swing.JLabel HomeIcon;
     private javax.swing.JPanel IconMinMax;
+    private javax.swing.JTextField Input_Rain;
+    private javax.swing.JTextField Input_Wind;
     private javax.swing.JPanel MainBoard;
     private javax.swing.JLabel MaxIcon;
     private javax.swing.JPanel MenuIcon;
-    private javax.swing.JButton Program9BTN_Start;
+    private javax.swing.JTextArea Output_Rainfall;
+    private javax.swing.JTextArea Output_TCWS;
     private javax.swing.JButton Program_10BTN;
     private javax.swing.JButton Program_1BTN;
     private javax.swing.JButton Program_2BTN;
@@ -1116,30 +1286,25 @@ private void resetButtonColors() {
     private javax.swing.JButton Program_7BTN;
     private javax.swing.JButton Program_8BTN;
     private javax.swing.JButton Program_9BTN;
+    private javax.swing.JButton SubmitBTN;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JPanel linehidemenu;
     // End of variables declaration//GEN-END:variables
 }
