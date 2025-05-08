@@ -122,23 +122,19 @@ private void resetButtonColors() {
         jLabel6 = new javax.swing.JLabel();
         Program_1BTN = new javax.swing.JButton();
         jPanel2 = new jPanelTransparent();
-        jLabel7 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jPanel3 = new jPanelTransparent();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jPanel4 = new jPanelTransparent();
+        addressProgram_4 = new javax.swing.JTextField();
+        consumedProgram_4 = new javax.swing.JTextField();
+        SubmitProgram_4BTN = new javax.swing.JButton();
+        nameProgram_4 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        Program4BTN_Start = new javax.swing.JButton();
+        jPanel4 = new jPanelTransparent();
+        jLabel18 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        outputProgram_4 = new javax.swing.JTextArea();
+        ClearBTNProgram_4 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
@@ -558,20 +554,34 @@ private void resetButtonColors() {
 
         jPanel2.setPreferredSize(new java.awt.Dimension(300, 400));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/37.png"))); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel20.setText("Customer Name:");
 
-        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel20.setText("Enter Customer Name");
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel12.setText("Customer Address:");
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel23.setText("how much kWh was consumed.");
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel13.setText("INPUT");
 
-        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel24.setText("Provide the name of the customer and");
+        addressProgram_4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel27.setText("and Consumption");
+        consumedProgram_4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        SubmitProgram_4BTN.setBackground(new java.awt.Color(250, 250, 245));
+        SubmitProgram_4BTN.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        SubmitProgram_4BTN.setText("Submit");
+        SubmitProgram_4BTN.setBorder(null);
+        SubmitProgram_4BTN.setBorderPainted(false);
+        SubmitProgram_4BTN.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SubmitProgram_4BTNMouseClicked(evt);
+            }
+        });
+
+        nameProgram_4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel16.setText("Kilowatts per Hour:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -580,163 +590,99 @@ private void resetButtonColors() {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jLabel7))
+                        .addGap(72, 72, 72)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel20)
+                                .addGap(90, 90, 90)
+                                .addComponent(nameProgram_4, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel16)
+                                    .addComponent(jLabel12))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(addressProgram_4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(consumedProgram_4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jLabel20))
+                        .addGap(280, 280, 280)
+                        .addComponent(jLabel13))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
-                        .addComponent(jLabel27))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel24)))
-                .addContainerGap(44, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel23)
-                .addGap(59, 59, 59))
+                        .addGap(258, 258, 258)
+                        .addComponent(SubmitProgram_4BTN, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jLabel7)
-                .addGap(31, 31, 31)
-                .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel27)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel24)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel23)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel3.setPreferredSize(new java.awt.Dimension(300, 400));
-
-        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setText("Let the Program Compute the Charge");
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/38.png"))); // NOI18N
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel14.setText(" It applies the tiered rate depending on");
-
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-
-        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel22.setText("how much electricity was used.");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(jLabel15)
-                .addGap(274, 274, 274))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 89, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel13)
-                .addGap(86, 86, 86))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel12)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel14))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jLabel22)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jLabel13)
-                .addGap(26, 26, 26)
-                .addComponent(jLabel12)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel22)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel15)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(nameProgram_4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(addressProgram_4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(consumedProgram_4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(SubmitProgram_4BTN, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         jPanel4.setPreferredSize(new java.awt.Dimension(300, 400));
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel16.setText("View the Bill");
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jLabel18.setText("RESULT");
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/39.png"))); // NOI18N
+        outputProgram_4.setColumns(20);
+        outputProgram_4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        outputProgram_4.setRows(5);
+        jScrollPane3.setViewportView(outputProgram_4);
 
-        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel19.setText("Get the customer’s name, total kWh,");
-
-        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel25.setText("and the amount they need to pay.");
+        ClearBTNProgram_4.setBackground(new java.awt.Color(250, 250, 245));
+        ClearBTNProgram_4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ClearBTNProgram_4.setText("Clear");
+        ClearBTNProgram_4.setBorder(null);
+        ClearBTNProgram_4.setBorderPainted(false);
+        ClearBTNProgram_4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ClearBTNProgram_4MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap(53, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addGap(27, 27, 27)))
-                .addGap(79, 79, 79))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 50, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel19)
-                    .addComponent(jLabel25))
-                .addGap(44, 44, 44))
+                        .addComponent(jLabel18)
+                        .addGap(172, 172, 172))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(ClearBTNProgram_4, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(161, 161, 161))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel18)
+                .addGap(28, 28, 28)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel19)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel25)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addComponent(ClearBTNProgram_4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
-
-        Program4BTN_Start.setBackground(new java.awt.Color(250, 250, 245));
-        Program4BTN_Start.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        Program4BTN_Start.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icon/18.png"))); // NOI18N
-        Program4BTN_Start.setText("   LET'S GET IT ON!");
-        Program4BTN_Start.setToolTipText("");
-        Program4BTN_Start.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        Program4BTN_Start.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                Program4BTN_StartMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                Program4BTN_StartMouseExited(evt);
-            }
-        });
-        Program4BTN_Start.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Program4BTN_StartActionPerformed(evt);
-            }
-        });
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
@@ -758,16 +704,11 @@ private void resetButtonColors() {
                 .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MainBoardLayout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(82, 82, 82)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(85, 85, 85)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 431, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(478, 478, 478)
-                        .addComponent(Program4BTN_Start, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(406, 406, 406)
+                        .addGap(405, 405, 405)
                         .addComponent(jLabel5))
                     .addGroup(MainBoardLayout.createSequentialGroup()
                         .addGap(167, 167, 167)
@@ -775,26 +716,23 @@ private void resetButtonColors() {
                     .addGroup(MainBoardLayout.createSequentialGroup()
                         .addGap(267, 267, 267)
                         .addComponent(jLabel21)))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         MainBoardLayout.setVerticalGroup(
             MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MenuIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
+            .addComponent(MenuIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainBoardLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(40, 40, 40)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel21)
-                .addGap(74, 74, 74)
-                .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE))
-                .addGap(39, 39, 39)
-                .addComponent(Program4BTN_Start)
-                .addGap(49, 49, 49))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 418, Short.MAX_VALUE))
+                .addGap(71, 71, 71))
         );
 
         getContentPane().add(MainBoard, java.awt.BorderLayout.CENTER);
@@ -832,17 +770,34 @@ private void resetButtonColors() {
 
     
     private void ExitIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitIconMouseClicked
-        System.exit(0);
+                    int confirm = JOptionPane.showConfirmDialog(
+                this, 
+                "Are you sure you want to exit BayanApp?", 
+                "Exit Confirmation", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE
+            );
+
+            if (confirm == JOptionPane.YES_OPTION) {
+                Bye byePage = new Bye();
+                byePage.setVisible(true);
+
+                this.setVisible(false);
+
+                new javax.swing.Timer(2000, (e) -> {
+                    System.exit(0);
+                }).start();
+            }
     }//GEN-LAST:event_ExitIconMouseClicked
 
     private void MaxIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaxIconMouseClicked
-        if(this.getExtendedState()!= Program_4_Start.MAXIMIZED_BOTH)
+        if(this.getExtendedState()!= Program_4.MAXIMIZED_BOTH)
         {
-            this.setExtendedState(Program_4_Start.MAXIMIZED_BOTH);
+            this.setExtendedState(Program_4.MAXIMIZED_BOTH);
         }
         else
         {
-            this.setExtendedState(Program_4_Start.NORMAL);
+            this.setExtendedState(Program_4.NORMAL);
         }
     }//GEN-LAST:event_MaxIconMouseClicked
 
@@ -863,35 +818,306 @@ private void resetButtonColors() {
 
     }//GEN-LAST:event_ExitIconMouseExited
 
-    private void Program4BTN_StartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program4BTN_StartActionPerformed
+    private void ExitBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseEntered
+        ExitBTN.setForeground(Color.WHITE);
+        ExitBTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_ExitBTNMouseEntered
 
-        resetButtonColors();
-        Program_3BTN.setBackground(new java.awt.Color(180, 100, 255));
-        Program_4 start3 = new Program_4();
-        start3.setVisible(true);
+    private void ExitBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseExited
+        ExitBTN.setForeground(Color.BLACK);
+        ExitBTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_ExitBTNMouseExited
+
+    private void ExitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBTNActionPerformed
+                    int confirm = JOptionPane.showConfirmDialog(
+                this, 
+                "Are you sure you want to exit BayanApp?", 
+                "Exit Confirmation", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE
+            );
+
+            if (confirm == JOptionPane.YES_OPTION) {
+                Bye byePage = new Bye();
+                byePage.setVisible(true);
+
+                this.setVisible(false);
+
+                new javax.swing.Timer(2000, (e) -> {
+                    System.exit(0);
+                }).start();
+            }
+    }//GEN-LAST:event_ExitBTNActionPerformed
+
+    private void Program_2BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseEntered
+        Program_2BTN.setForeground(Color.WHITE);
+        Program_2BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_2BTNMouseEntered
+
+    private void Program_2BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseExited
+        Program_2BTN.setForeground(Color.BLACK);
+        Program_2BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_2BTNMouseExited
+
+    private void Program_2BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_2BTNActionPerformed
+       Program_2BTN.setEnabled(false);
         this.setVisible(false);
-    }//GEN-LAST:event_Program4BTN_StartActionPerformed
 
-    private void Program4BTN_StartMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program4BTN_StartMouseExited
-        Program4BTN_Start.setForeground(Color.BLACK);
-        Program4BTN_Start.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program4BTN_StartMouseExited
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
 
-    private void Program4BTN_StartMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program4BTN_StartMouseEntered
-        Program4BTN_Start.setForeground(Color.WHITE);
-        Program4BTN_Start.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program4BTN_StartMouseEntered
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_2 program2 = new Program_2();
+            program2.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start(); 
+    }//GEN-LAST:event_Program_2BTNActionPerformed
 
-    private void Program_1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_1BTNActionPerformed
-        //Program_1 program1 = new Program_1();
-        //program1.setVisible(true);
+    private void Program_3BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseEntered
+        Program_3BTN.setForeground(Color.WHITE);
+        Program_3BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_3BTNMouseEntered
+
+    private void Program_3BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseExited
+        Program_3BTN.setForeground(Color.BLACK);
+        Program_3BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_3BTNMouseExited
+
+    private void Program_3BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_3BTNActionPerformed
+        Program_3BTN.setEnabled(false);
         this.setVisible(false);
-    }//GEN-LAST:event_Program_1BTNActionPerformed
 
-    private void Program_1BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseExited
-        Program_1BTN.setBackground(Color.WHITE);
-        Program_1BTN.setForeground(Color.BLACK);
-    }//GEN-LAST:event_Program_1BTNMouseExited
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_3 program3 = new Program_3();
+            program3.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_Program_3BTNActionPerformed
+
+    private void Program_4BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseEntered
+        Program_4BTN.setForeground(Color.WHITE);
+        Program_4BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_4BTNMouseEntered
+
+    private void Program_4BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseExited
+        Program_4BTN.setForeground(Color.BLACK);
+        Program_4BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_4BTNMouseExited
+
+    private void Program_4BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_4BTNActionPerformed
+        Program_4BTN.setEnabled(false);
+        this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_4 program4 = new Program_4();
+            program4.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_Program_4BTNActionPerformed
+
+    private void Program_5BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseEntered
+        Program_5BTN.setForeground(Color.WHITE);
+        Program_5BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_5BTNMouseEntered
+
+    private void Program_5BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseExited
+        Program_5BTN.setForeground(Color.BLACK);
+        Program_5BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_5BTNMouseExited
+
+    private void Program_5BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_5BTNActionPerformed
+        Program_5BTN.setEnabled(false);
+        this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_5 program5 = new Program_5();
+            program5.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_Program_5BTNActionPerformed
+
+    private void Program_6BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseEntered
+        Program_6BTN.setForeground(Color.WHITE);
+        Program_6BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_6BTNMouseEntered
+
+    private void Program_6BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseExited
+        Program_6BTN.setForeground(Color.BLACK);
+        Program_6BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_6BTNMouseExited
+
+    private void Program_6BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_6BTNActionPerformed
+        Program_6BTN.setEnabled(false);
+        this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_6 program6 = new Program_6();
+            program6.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_Program_6BTNActionPerformed
+
+    private void Program_7BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseEntered
+        Program_7BTN.setForeground(Color.WHITE);
+        Program_7BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_7BTNMouseEntered
+
+    private void Program_7BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseExited
+        Program_7BTN.setForeground(Color.BLACK);
+        Program_7BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_7BTNMouseExited
+
+    private void Program_7BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_7BTNActionPerformed
+        Program_7BTN.setEnabled(false);
+        this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_7 program7 = new Program_7();
+            program7.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_Program_7BTNActionPerformed
+
+    private void Program_8BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseEntered
+        Program_8BTN.setForeground(Color.WHITE);
+        Program_8BTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_Program_8BTNMouseEntered
+
+    private void Program_8BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseExited
+        Program_8BTN.setForeground(Color.BLACK);
+        Program_8BTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_Program_8BTNMouseExited
+
+    private void Program_8BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_8BTNActionPerformed
+        Program_8BTN.setEnabled(false);
+        this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_8 program8 = new Program_8();
+            program8.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_Program_8BTNActionPerformed
+
+    private void Program_9BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseEntered
+        Program_9BTN.setBackground(new Color(150, 50, 230));
+        Program_9BTN.setForeground(Color.WHITE);
+    }//GEN-LAST:event_Program_9BTNMouseEntered
+
+    private void Program_9BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseExited
+        Program_9BTN.setBackground(Color.WHITE);
+        Program_9BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_9BTNMouseExited
+
+    private void Program_9BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_9BTNActionPerformed
+        Program_9BTN.setEnabled(false);
+        this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_9 program9 = new Program_9();
+            program9.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_Program_9BTNActionPerformed
+
+    private void Program_10BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseEntered
+        Program_10BTN.setBackground(new Color(150, 50, 230));
+        Program_10BTN.setForeground(Color.WHITE);
+    }//GEN-LAST:event_Program_10BTNMouseEntered
+
+    private void Program_10BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseExited
+        Program_10BTN.setBackground(Color.WHITE);
+        Program_10BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_10BTNMouseExited
+
+    private void Program_10BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_10BTNActionPerformed
+        Program_10BTN.setEnabled(false);
+        this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_10 program10 = new Program_10();
+            program10.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_Program_10BTNActionPerformed
+
+    private void DashboardBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseEntered
+        DashboardBTN.setForeground(Color.WHITE);
+        DashboardBTN.setBackground(new Color(150, 50, 230));
+    }//GEN-LAST:event_DashboardBTNMouseEntered
+
+    private void DashboardBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseExited
+        DashboardBTN.setForeground(Color.BLACK);
+        DashboardBTN.setBackground(Color.WHITE);
+    }//GEN-LAST:event_DashboardBTNMouseExited
+
+    private void DashboardBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardBTNActionPerformed
+        DashboardBTN.setEnabled(false);
+        this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Dashboard dashboard = new Dashboard();
+            dashboard.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_DashboardBTNActionPerformed
 
     private void Program_1BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseEntered
         Program_1BTN.setBackground(new Color(150, 50, 230));
@@ -901,179 +1127,72 @@ private void resetButtonColors() {
         Program_1BTN.setBorder(BorderFactory.createEmptyBorder());
     }//GEN-LAST:event_Program_1BTNMouseEntered
 
-    private void DashboardBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardBTNActionPerformed
-        //Dashboard dashboard = new Dashboard();
-        //dashboard.setVisible(true);
+    private void Program_1BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_1BTNMouseExited
+        Program_1BTN.setBackground(Color.WHITE);
+        Program_1BTN.setForeground(Color.BLACK);
+    }//GEN-LAST:event_Program_1BTNMouseExited
+
+    private void Program_1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_1BTNActionPerformed
+        Program_1BTN.setEnabled(false);
         this.setVisible(false);
-    }//GEN-LAST:event_DashboardBTNActionPerformed
 
-    private void DashboardBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseExited
-        DashboardBTN.setForeground(Color.BLACK);
-        DashboardBTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_DashboardBTNMouseExited
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
 
-    private void DashboardBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DashboardBTNMouseEntered
-        DashboardBTN.setForeground(Color.WHITE);
-        DashboardBTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_DashboardBTNMouseEntered
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_1 program1 = new Program_1();
+            program1.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
+    }//GEN-LAST:event_Program_1BTNActionPerformed
+    String[] vaccineNames = null;
+    int[] vaccinatedCounts = null;
+    int vaccineCount = 0;
+    private void SubmitProgram_4BTNMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitProgram_4BTNMouseClicked
+        // TODO add your handling code here:
+        String name = nameProgram_4.getText().trim();
+        String address = addressProgram_4.getText().trim();
 
-    private void Program_10BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_10BTNActionPerformed
-        //Program_10 program10 = new Program_10();
-        //program10.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_10BTNActionPerformed
+        try {
+            double kwh = Double.parseDouble(consumedProgram_4.getText().trim());
 
-    private void Program_10BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseExited
-        Program_10BTN.setBackground(Color.WHITE);
-        Program_10BTN.setForeground(Color.BLACK);
-    }//GEN-LAST:event_Program_10BTNMouseExited
+            double amount;
+            if (kwh <= 50) {
+                amount = kwh * 5;
+            } else {
+                amount = (50 * 5) + ((kwh - 50) * 9);
+            }
 
-    private void Program_10BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_10BTNMouseEntered
-        Program_10BTN.setBackground(new Color(150, 50, 230));
-        Program_10BTN.setForeground(Color.WHITE);
-    }//GEN-LAST:event_Program_10BTNMouseEntered
+            StringBuilder result = new StringBuilder();
+            result.append("──────────── ELECTRIC BILL ────────────\n");
+            result.append("Customer Name   : ").append(name).append("\n");
+            result.append("Address         : ").append(address).append("\n");
+            result.append("kWh Consumed    : ").append(kwh).append(" kWh\n\n");
+            result.append("Base Rate       : PHP 5 (first 50 kWh)\n");
+            result.append("Excess Rate     : PHP 9 (beyond 50 kWh)\n\n");
+            result.append("Amount Payable  : PHP ").append(String.format("%.2f", amount)).append("\n");
+            result.append("──────────────────────────────────");
 
-    private void Program_9BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_9BTNActionPerformed
-        //Program_9 program9 = new Program_9();
-        //program9.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_9BTNActionPerformed
+            outputProgram_4.setText(result.toString());
+        } catch (NumberFormatException e) {
+            outputProgram_4.setText("Invalid number input for kWh consumed.");
+        } catch (Exception e) {
+            outputProgram_4.setText("An error occurred while processing the bill.");
+        }
+    }//GEN-LAST:event_SubmitProgram_4BTNMouseClicked
 
-    private void Program_9BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseExited
-        Program_9BTN.setBackground(Color.WHITE);
-        Program_9BTN.setForeground(Color.BLACK);
-    }//GEN-LAST:event_Program_9BTNMouseExited
-
-    private void Program_9BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseEntered
-        Program_9BTN.setBackground(new Color(150, 50, 230));
-        Program_9BTN.setForeground(Color.WHITE);
-    }//GEN-LAST:event_Program_9BTNMouseEntered
-
-    private void Program_8BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_8BTNActionPerformed
-        //Program_8 program8 = new Program_8();
-        //program8.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_8BTNActionPerformed
-
-    private void Program_8BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseExited
-        Program_8BTN.setForeground(Color.BLACK);
-        Program_8BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_8BTNMouseExited
-
-    private void Program_8BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_8BTNMouseEntered
-        Program_8BTN.setForeground(Color.WHITE);
-        Program_8BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_8BTNMouseEntered
-
-    private void Program_7BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_7BTNActionPerformed
-        //Program_7 program7 = new Program_7();
-        //program7.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_7BTNActionPerformed
-
-    private void Program_7BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseExited
-        Program_7BTN.setForeground(Color.BLACK);
-        Program_7BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_7BTNMouseExited
-
-    private void Program_7BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_7BTNMouseEntered
-        Program_7BTN.setForeground(Color.WHITE);
-        Program_7BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_7BTNMouseEntered
-
-    private void Program_6BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_6BTNActionPerformed
-        //Program_6 program6 = new Program_6();
-        //program6.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_6BTNActionPerformed
-
-    private void Program_6BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseExited
-        Program_6BTN.setForeground(Color.BLACK);
-        Program_6BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_6BTNMouseExited
-
-    private void Program_6BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_6BTNMouseEntered
-        Program_6BTN.setForeground(Color.WHITE);
-        Program_6BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_6BTNMouseEntered
-
-    private void Program_5BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_5BTNActionPerformed
-        //Program_5 program5 = new Program_5();
-        //program5.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_5BTNActionPerformed
-
-    private void Program_5BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseExited
-        Program_5BTN.setForeground(Color.BLACK);
-        Program_5BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_5BTNMouseExited
-
-    private void Program_5BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_5BTNMouseEntered
-        Program_5BTN.setForeground(Color.WHITE);
-        Program_5BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_5BTNMouseEntered
-
-    private void Program_4BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_4BTNActionPerformed
-        Program_4 program4 = new Program_4();
-        program4.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_4BTNActionPerformed
-
-    private void Program_4BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseExited
-        Program_4BTN.setForeground(Color.BLACK);
-        Program_4BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_4BTNMouseExited
-
-    private void Program_4BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_4BTNMouseEntered
-        Program_4BTN.setForeground(Color.WHITE);
-        Program_4BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_4BTNMouseEntered
-
-    private void Program_3BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_3BTNActionPerformed
-        //Program_3_Start program3 = new Program_4_Start();
-        //program3.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_3BTNActionPerformed
-
-    private void Program_3BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseExited
-        Program_3BTN.setForeground(Color.BLACK);
-        Program_3BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_3BTNMouseExited
-
-    private void Program_3BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_3BTNMouseEntered
-        Program_3BTN.setForeground(Color.WHITE);
-        Program_3BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_3BTNMouseEntered
-
-    private void Program_2BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_2BTNActionPerformed
-        //Program_2 program2 = new Program_2();
-        //program2.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_Program_2BTNActionPerformed
-
-    private void Program_2BTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseExited
-        Program_2BTN.setForeground(Color.BLACK);
-        Program_2BTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_Program_2BTNMouseExited
-
-    private void Program_2BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_2BTNMouseEntered
-        Program_2BTN.setForeground(Color.WHITE);
-        Program_2BTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_Program_2BTNMouseEntered
-
-    private void ExitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBTNActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_ExitBTNActionPerformed
-
-    private void ExitBTNMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseExited
-        ExitBTN.setForeground(Color.BLACK);
-        ExitBTN.setBackground(Color.WHITE);
-    }//GEN-LAST:event_ExitBTNMouseExited
-
-    private void ExitBTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitBTNMouseEntered
-        ExitBTN.setForeground(Color.WHITE);
-        ExitBTN.setBackground(new Color(150, 50, 230));
-    }//GEN-LAST:event_ExitBTNMouseEntered
+    private void ClearBTNProgram_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearBTNProgram_4MouseClicked
+        // TODO add your handling code here:
+        
+        // Clear all fields and reset variables
+        nameProgram_4.setText("");
+        addressProgram_4.setText("");
+        consumedProgram_4.setText("");
+        outputProgram_4.setText("");
+    }//GEN-LAST:event_ClearBTNProgram_4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1092,27 +1211,20 @@ private void resetButtonColors() {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Program_4_Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Program_4_Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Program_4_Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Program_4_Start.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Program_4.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Program_4_Start().setVisible(true);
+                new Program_4().setVisible(true);
             }
         });
     }
@@ -1121,6 +1233,7 @@ private void resetButtonColors() {
     private javax.swing.JPanel BTNClose;
     private javax.swing.JPanel BTNMax;
     private javax.swing.JPanel BTNMin;
+    private javax.swing.JButton ClearBTNProgram_4;
     private javax.swing.JButton DashboardBTN;
     private javax.swing.JButton ExitBTN;
     private javax.swing.JLabel ExitIcon;
@@ -1130,7 +1243,6 @@ private void resetButtonColors() {
     private javax.swing.JPanel MainBoard;
     private javax.swing.JLabel MaxIcon;
     private javax.swing.JPanel MenuIcon;
-    private javax.swing.JButton Program4BTN_Start;
     private javax.swing.JButton Program_10BTN;
     private javax.swing.JButton Program_1BTN;
     private javax.swing.JButton Program_2BTN;
@@ -1141,32 +1253,28 @@ private void resetButtonColors() {
     private javax.swing.JButton Program_7BTN;
     private javax.swing.JButton Program_8BTN;
     private javax.swing.JButton Program_9BTN;
+    private javax.swing.JButton SubmitProgram_4BTN;
+    private javax.swing.JTextField addressProgram_4;
+    private javax.swing.JTextField consumedProgram_4;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPanel linehidemenu;
+    private javax.swing.JTextField nameProgram_4;
+    private javax.swing.JTextArea outputProgram_4;
     // End of variables declaration//GEN-END:variables
 }

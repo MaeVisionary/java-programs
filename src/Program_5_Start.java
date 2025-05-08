@@ -122,25 +122,27 @@ private void resetButtonColors() {
         Program_1BTN = new javax.swing.JButton();
         jPanel2 = new jPanelTransparent();
         EnterFuel = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TextAreaFuel = new javax.swing.JTextArea();
         EnterEarnings = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        TextAreaEarnings = new javax.swing.JTextArea();
         EnterBoundary = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        TextAreaBoundary = new javax.swing.JTextArea();
         Input = new javax.swing.JLabel();
         Submit = new javax.swing.JButton();
+        EnterFuelTextField = new javax.swing.JTextField();
+        EnterEarningsTextField = new javax.swing.JTextField();
+        EnterBoundaryTextField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jPanel3 = new jPanelTransparent();
         Results = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        ResultsTextArea = new javax.swing.JTextArea();
         Clear = new javax.swing.JButton();
+        TotalEarnings = new javax.swing.JLabel();
+        TotalEarningsTextField = new javax.swing.JTextField();
+        TotalExpenses = new javax.swing.JLabel();
+        NetIncome = new javax.swing.JLabel();
+        TotalExpensesTextField = new javax.swing.JTextField();
+        NetIncomeTextField = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -560,32 +562,49 @@ private void resetButtonColors() {
         EnterFuel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         EnterFuel.setText("Enter Fuel Expenses:");
 
-        TextAreaFuel.setColumns(20);
-        TextAreaFuel.setRows(5);
-        jScrollPane1.setViewportView(TextAreaFuel);
-
         EnterEarnings.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         EnterEarnings.setText("Enter Total Earnings for the Day:");
-
-        TextAreaEarnings.setColumns(20);
-        TextAreaEarnings.setRows(5);
-        jScrollPane2.setViewportView(TextAreaEarnings);
 
         EnterBoundary.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         EnterBoundary.setText("Enter Boundary Fee:");
 
-        TextAreaBoundary.setColumns(20);
-        TextAreaBoundary.setRows(5);
-        jScrollPane3.setViewportView(TextAreaBoundary);
-
         Input.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        Input.setForeground(new java.awt.Color(118, 16, 198));
         Input.setText("INPUT:");
 
+        Submit.setBackground(new java.awt.Color(118, 16, 198));
         Submit.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Submit.setForeground(new java.awt.Color(255, 255, 255));
         Submit.setText("SUBMIT");
+        Submit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SubmitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SubmitMouseExited(evt);
+            }
+        });
         Submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SubmitActionPerformed(evt);
+            }
+        });
+
+        EnterFuelTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnterFuelTextFieldActionPerformed(evt);
+            }
+        });
+
+        EnterEarningsTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnterEarningsTextFieldActionPerformed(evt);
+            }
+        });
+
+        EnterBoundaryTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnterBoundaryTextFieldActionPerformed(evt);
             }
         });
 
@@ -593,28 +612,29 @@ private void resetButtonColors() {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(Input)
+                        .addGap(0, 137, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EnterEarnings)
-                            .addComponent(EnterFuel)
-                            .addComponent(EnterBoundary)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(Input))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addComponent(Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 66, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(EnterEarningsTextField)
+                            .addComponent(EnterFuelTextField)
+                            .addComponent(EnterBoundaryTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(EnterEarnings)
+                                    .addComponent(EnterFuel)
+                                    .addComponent(EnterBoundary))
+                                .addGap(0, 103, Short.MAX_VALUE)))))
                 .addGap(54, 54, 54))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(171, 171, 171)
+                .addComponent(Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -623,46 +643,79 @@ private void resetButtonColors() {
                 .addComponent(Input)
                 .addGap(18, 18, 18)
                 .addComponent(EnterEarnings)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(EnterEarningsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(EnterBoundary)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(EnterFuel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(EnterBoundaryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(EnterFuel)
+                .addGap(16, 16, 16)
+                .addComponent(EnterFuelTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
                 .addComponent(Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Jeepney Driver's Daily Kita");
+        jLabel5.setText("Jeepney ");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setText("For every jeepney driver, the road is a place of hustle. This program tracks daily");
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel8.setText("Jeepney Driver");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("earnings, helping drivers keep track of their income, including boundary and ");
 
         jPanel3.setPreferredSize(new java.awt.Dimension(300, 400));
 
         Results.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        Results.setForeground(new java.awt.Color(118, 16, 198));
         Results.setText("RESULTS:");
 
-        ResultsTextArea.setColumns(20);
-        ResultsTextArea.setRows(5);
-        jScrollPane4.setViewportView(ResultsTextArea);
-
+        Clear.setBackground(new java.awt.Color(118, 16, 198));
         Clear.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Clear.setForeground(new java.awt.Color(255, 255, 255));
         Clear.setText("CLEAR");
+        Clear.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ClearMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ClearMouseExited(evt);
+            }
+        });
         Clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ClearActionPerformed(evt);
+            }
+        });
+
+        TotalEarnings.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        TotalEarnings.setText("Total Earnings:");
+
+        TotalEarningsTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TotalEarningsTextFieldActionPerformed(evt);
+            }
+        });
+
+        TotalExpenses.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        TotalExpenses.setText("Total Expenses:");
+
+        NetIncome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        NetIncome.setText("Net Income or Kita:");
+
+        TotalExpensesTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TotalExpensesTextFieldActionPerformed(evt);
+            }
+        });
+
+        NetIncomeTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NetIncomeTextFieldActionPerformed(evt);
             }
         });
 
@@ -671,32 +724,53 @@ private void resetButtonColors() {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(152, 152, 152)
-                .addComponent(Results)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(151, 151, 151))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(TotalExpenses)
+                            .addComponent(TotalEarnings)
+                            .addComponent(TotalEarningsTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+                            .addComponent(NetIncome)
+                            .addComponent(NetIncomeTextField)
+                            .addComponent(TotalExpensesTextField)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(Results)))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
+                .addGap(50, 50, 50)
                 .addComponent(Results)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TotalEarnings)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TotalEarningsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(NetIncome)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(NetIncomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(TotalExpenses)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(TotalExpensesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addComponent(Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel22.setText("fuel expenses, for a clearer financial picture at the end of each day.");
+
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel7.setFont(new java.awt.Font("SansSerif", 1, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(118, 16, 198));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Driver's Daily Kita");
 
         javax.swing.GroupLayout MainBoardLayout = new javax.swing.GroupLayout(MainBoard);
         MainBoard.setLayout(MainBoardLayout);
@@ -706,45 +780,48 @@ private void resetButtonColors() {
                 .addComponent(MenuIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(251, 251, 251)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(277, 277, 277)
-                        .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(MainBoardLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel9))
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(283, 283, 283)
+                        .addComponent(jLabel9))
                     .addGroup(MainBoardLayout.createSequentialGroup()
                         .addGap(100, 100, 100)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(96, 96, 96)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(MainBoardLayout.createSequentialGroup()
-                        .addGap(337, 337, 337)
-                        .addComponent(jLabel22)))
-                .addContainerGap(114, Short.MAX_VALUE))
+                        .addGap(336, 336, 336)
+                        .addComponent(jLabel22))
+                    .addGroup(MainBoardLayout.createSequentialGroup()
+                        .addGap(549, 549, 549)
+                        .addComponent(jLabel8))
+                    .addGroup(MainBoardLayout.createSequentialGroup()
+                        .addGap(312, 312, 312)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         MainBoardLayout.setVerticalGroup(
             MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(MenuIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 745, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainBoardLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(jLabel5)
-                .addGap(12, 12, 12)
+                .addGap(62, 62, 62)
+                .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel22)
-                .addGap(48, 48, 48)
+                .addGap(30, 30, 30)
                 .addGroup(MainBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        getContentPane().add(MainBoard, java.awt.BorderLayout.CENTER);
+        getContentPane().add(MainBoard, java.awt.BorderLayout.PAGE_END);
 
         setSize(new java.awt.Dimension(1416, 788));
         setLocationRelativeTo(null);
@@ -779,7 +856,24 @@ private void resetButtonColors() {
 
     
     private void ExitIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitIconMouseClicked
-        System.exit(0);
+                    int confirm = JOptionPane.showConfirmDialog(
+                this, 
+                "Are you sure you want to exit BayanApp?", 
+                "Exit Confirmation", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE
+            );
+
+            if (confirm == JOptionPane.YES_OPTION) {
+                Bye byePage = new Bye();
+                byePage.setVisible(true);
+
+                this.setVisible(false);
+
+                new javax.swing.Timer(2000, (e) -> {
+                    System.exit(0);
+                }).start();
+            }
     }//GEN-LAST:event_ExitIconMouseClicked
 
     private void MaxIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MaxIconMouseClicked
@@ -811,74 +905,212 @@ private void resetButtonColors() {
     }//GEN-LAST:event_ExitIconMouseExited
 
     private void ExitBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitBTNActionPerformed
-        System.exit(0);
+                    int confirm = JOptionPane.showConfirmDialog(
+                this, 
+                "Are you sure you want to exit BayanApp?", 
+                "Exit Confirmation", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE
+            );
+
+            if (confirm == JOptionPane.YES_OPTION) {
+                Bye byePage = new Bye();
+                byePage.setVisible(true);
+
+                this.setVisible(false);
+
+                new javax.swing.Timer(2000, (e) -> {
+                    System.exit(0);
+                }).start();
+            }
     }//GEN-LAST:event_ExitBTNActionPerformed
 
     private void Program_2BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_2BTNActionPerformed
-        //Program_2 program2 = new Program_2();
-        //program2.setVisible(true);
-        this.setVisible(false);   
+        Program_2BTN.setEnabled(false);
+        this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_2 program2 = new Program_2();
+            program2.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();   
     }//GEN-LAST:event_Program_2BTNActionPerformed
 
     private void Program_3BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_3BTNActionPerformed
-        //Program_3 program3 = new Program_3();
-        //program3.setVisible(true);
+        Program_3BTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_3 program3 = new Program_3();
+            program3.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
 
     }//GEN-LAST:event_Program_3BTNActionPerformed
 
     private void Program_4BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_4BTNActionPerformed
-        //Program_4 program4 = new Program_4();
-        //program4.setVisible(true);
+        Program_4BTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_4 program4 = new Program_4();
+            program4.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }//GEN-LAST:event_Program_4BTNActionPerformed
 
     private void Program_5BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_5BTNActionPerformed
-        //Program_5 program5 = new Program_5();
-        //program5.setVisible(true);
+        Program_5BTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_5 program5 = new Program_5();
+            program5.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }//GEN-LAST:event_Program_5BTNActionPerformed
 
     private void Program_6BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_6BTNActionPerformed
-        //Program_6 program6 = new Program_6();
-        //program6.setVisible(true);
+        Program_6BTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_6 program6 = new Program_6();
+            program6.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }//GEN-LAST:event_Program_6BTNActionPerformed
 
     private void Program_7BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_7BTNActionPerformed
-        //Program_7 program7 = new Program_7();
-        //program7.setVisible(true);
+        Program_7BTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_7 program7 = new Program_7();
+            program7.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }//GEN-LAST:event_Program_7BTNActionPerformed
 
     private void Program_8BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_8BTNActionPerformed
-        //Program_8 program8 = new Program_8();
-        //program8.setVisible(true);
+        Program_8BTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_8 program8 = new Program_8();
+            program8.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }//GEN-LAST:event_Program_8BTNActionPerformed
 
     private void Program_9BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_9BTNActionPerformed
-        //Program_9 program9 = new Program_9();
-        //program9.setVisible(true);
+        Program_9BTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_9 program9 = new Program_9();
+            program9.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }//GEN-LAST:event_Program_9BTNActionPerformed
 
     private void Program_10BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_10BTNActionPerformed
-        //Program_10 program10 = new Program_10();
-        //program10.setVisible(true);
+        Program_10BTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_10 program10 = new Program_10();
+            program10.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }//GEN-LAST:event_Program_10BTNActionPerformed
 
     private void DashboardBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DashboardBTNActionPerformed
-        //Dashboard dashboard = new Dashboard();
-        //dashboard.setVisible(true);
+        DashboardBTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Dashboard dashboard = new Dashboard();
+            dashboard.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }//GEN-LAST:event_DashboardBTNActionPerformed
 
     private void Program_1BTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Program_1BTNActionPerformed
-        //Program_1 program1 = new Program_1();
-        //program1.setVisible(true);
+        Program_1BTN.setEnabled(false);
         this.setVisible(false);
+
+        Loading_Screen loading = new Loading_Screen();
+        loading.setVisible(true);
+
+        javax.swing.Timer timer = new javax.swing.Timer(2000, (e) -> {
+            loading.dispose();
+            Program_1 program1 = new Program_1();
+            program1.setVisible(true);
+            this.dispose();
+        });
+        timer.setRepeats(false);
+        timer.start();
     }//GEN-LAST:event_Program_1BTNActionPerformed
 
     private void Program_9BTNMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Program_9BTNMouseEntered
@@ -1008,66 +1240,82 @@ private void resetButtonColors() {
 
     private void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
         // TODO add your handling code here:
-        TextAreaEarnings.setText("");
-        TextAreaBoundary.setText("");
-        TextAreaFuel.setText("");
-        ResultsTextArea.setText("");
+        EnterEarningsTextField.setText("");
+        EnterBoundaryTextField.setText("");
+        EnterFuelTextField.setText("");
+        TotalEarningsTextField.setText(""); 
+        TotalExpensesTextField.setText("");
+        NetIncomeTextField.setText("");
     }//GEN-LAST:event_ClearActionPerformed
 
     private void SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitActionPerformed
-        // TODO add your handling code here:
-        try {
-        double earnings = Double.parseDouble(TextAreaEarnings.getText());
-        double boundary = Double.parseDouble(TextAreaBoundary.getText());
-        double fuel = Double.parseDouble(TextAreaFuel.getText());
+
+    try {
+        double earnings = Double.parseDouble(EnterEarningsTextField.getText());
+        double boundary = Double.parseDouble(EnterBoundaryTextField.getText());
+        double fuel = Double.parseDouble(EnterFuelTextField.getText());
 
         double totalExpenses = boundary + fuel;
         double netIncome = earnings - totalExpenses;
 
-        String result = "Total Earnings: ₱" + earnings + "\n"
-                      + "Total Expenses (Boundary + Fuel): ₱" + totalExpenses + "\n"
-                      + "Net Income or Kita (Earnings – Expenses): ₱" + netIncome;
-
-        ResultsTextArea.setText(result);
+        TotalEarningsTextField.setText(String.format("%.2f", earnings));
+        TotalExpensesTextField.setText(String.format("%.2f", totalExpenses));
+        NetIncomeTextField.setText(String.format("%.2f", netIncome));
     } catch (NumberFormatException e) {
-        ResultsTextArea.setText("Please enter valid numbers in all fields.");
+        JOptionPane.showMessageDialog(null, "Invalid input: Please enter valid numbers.", "Input Error", JOptionPane.ERROR_MESSAGE);
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "An unexpected error occurred: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
     }//GEN-LAST:event_SubmitActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Program_9.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void TotalEarningsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalEarningsTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TotalEarningsTextFieldActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Program_9().setVisible(true);
-            }
-        });
-    }
+    private void EnterFuelTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterFuelTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EnterFuelTextFieldActionPerformed
+
+    private void TotalExpensesTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalExpensesTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TotalExpensesTextFieldActionPerformed
+
+    private void NetIncomeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NetIncomeTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NetIncomeTextFieldActionPerformed
+
+    private void EnterEarningsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterEarningsTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EnterEarningsTextFieldActionPerformed
+
+    private void EnterBoundaryTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterBoundaryTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EnterBoundaryTextFieldActionPerformed
+
+    private void SubmitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitMouseEntered
+        // TODO add your handling code here:
+        (Submit).setForeground(Color.BLACK);
+        (Submit).setBackground(Color.WHITE);
+    }//GEN-LAST:event_SubmitMouseEntered
+
+    private void SubmitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubmitMouseExited
+        // TODO add your handling code here:
+        (Submit).setForeground(Color.WHITE);
+        (Submit).setBackground(new Color(118,16,198));
+    }//GEN-LAST:event_SubmitMouseExited
+
+    private void ClearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearMouseEntered
+        // TODO add your handling code here:
+        (Clear).setForeground(Color.BLACK);
+        (Clear).setBackground(Color.WHITE);
+    }//GEN-LAST:event_ClearMouseEntered
+
+    private void ClearMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearMouseExited
+        // TODO add your handling code here:
+        (Clear).setForeground(Color.WHITE);
+        (Clear).setBackground(new Color(118,16,198));
+    }//GEN-LAST:event_ClearMouseExited
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BTNClose;
@@ -1076,8 +1324,11 @@ private void resetButtonColors() {
     private javax.swing.JButton Clear;
     private javax.swing.JButton DashboardBTN;
     private javax.swing.JLabel EnterBoundary;
+    private javax.swing.JTextField EnterBoundaryTextField;
     private javax.swing.JLabel EnterEarnings;
+    private javax.swing.JTextField EnterEarningsTextField;
     private javax.swing.JLabel EnterFuel;
+    private javax.swing.JTextField EnterFuelTextField;
     private javax.swing.JButton ExitBTN;
     private javax.swing.JLabel ExitIcon;
     private javax.swing.JPanel Header;
@@ -1087,6 +1338,8 @@ private void resetButtonColors() {
     private javax.swing.JPanel MainBoard;
     private javax.swing.JLabel MaxIcon;
     private javax.swing.JPanel MenuIcon;
+    private javax.swing.JLabel NetIncome;
+    private javax.swing.JTextField NetIncomeTextField;
     private javax.swing.JButton Program_10BTN;
     private javax.swing.JButton Program_1BTN;
     private javax.swing.JButton Program_2BTN;
@@ -1098,11 +1351,11 @@ private void resetButtonColors() {
     private javax.swing.JButton Program_8BTN;
     private javax.swing.JButton Program_9BTN;
     private javax.swing.JLabel Results;
-    private javax.swing.JTextArea ResultsTextArea;
     private javax.swing.JButton Submit;
-    private javax.swing.JTextArea TextAreaBoundary;
-    private javax.swing.JTextArea TextAreaEarnings;
-    private javax.swing.JTextArea TextAreaFuel;
+    private javax.swing.JLabel TotalEarnings;
+    private javax.swing.JTextField TotalEarningsTextField;
+    private javax.swing.JLabel TotalExpenses;
+    private javax.swing.JTextField TotalExpensesTextField;
     private javax.swing.JPanel hideMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -1110,15 +1363,12 @@ private void resetButtonColors() {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JPanel linehidemenu;
     // End of variables declaration//GEN-END:variables
 }
